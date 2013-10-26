@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	
+	"name": "test",
+	"description": "be be be be",
+	"version": "0.0.1",
+	
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"css": ["beauty.css"],
+			"js": ["script.js"],
+			"run_at": "document_idle"
+		}
+	]	
+
+}
