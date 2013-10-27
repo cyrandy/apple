@@ -17,7 +17,7 @@ function drag(ev)
         ev.dataTransfer.setData("type", 'a');
         console.log("Drag a link");
     } else {
-        console.log("what are you dragging?");
+        console.log("what are you dragging? quark quark");
     }
 }
 
@@ -55,7 +55,7 @@ function drop(ev)
 
 function getTagList(tagID)
 {
-    chrome.extension.sendRequest({method: "getImg", key: n}, function(response) {
+    chrome.extension.sendRequest({method: "getImg", key: tagID}, function(response) {
         console.log(response.data);
     });
 
