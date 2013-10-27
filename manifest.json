@@ -4,6 +4,12 @@
 	"name": "test",
 	"description": "be be be be",
 	"version": "0.0.1",
+	"background": {
+		"scripts": ["dataInfo.js", "background.js"]
+  	},
+  	"permissions": [
+	"storage"
+  	],
 	
 	"content_scripts": [
 		{
