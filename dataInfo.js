@@ -1,6 +1,6 @@
 function dataInfo(){
-	this.TagID = 0;
-	this.Url = "";
-	this.Description = "";
-	this.Image = "";
+	this.TagID;
+	this.Url;
+	this.Description;
+	this.Image;
 }
