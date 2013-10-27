@@ -35,6 +35,14 @@ function drop(ev)
 
 }
 
+function getTagList(tagID)
+{
+    chrome.extension.sendRequest({method: "getImage", key: n}, function(response) {
+      console.log(response.data);
+    });
+
+}
+
 function createTag(n)
 {
 	var height = '50';
@@ -51,8 +59,11 @@ function createTag(n)
 	tag.style.backgroundColor = '#99FF99';
 	tag.style.zIndex = '1000';
 	tag.textContent = n;
+
 	tag.addEventListener('drop', drop, false);
 	tag.addEventListener('dragover', allowDrop, false);
+        tag.addEventListener('click', getTagList(n), false);
+
 	var arrow = document.createElement('div');
 	arrow.className = 'wtf';
 	arrow.style.position = 'fixed';
