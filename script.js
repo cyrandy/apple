@@ -37,7 +37,7 @@ function drop(ev)
 
 function getTagList(tagID)
 {
-    chrome.extension.sendRequest({method: "getImage", key: n}, function(response) {
+    chrome.extension.sendRequest({method: "getImg", key: n}, function(response) {
       console.log(response.data);
     });
 
@@ -117,6 +117,15 @@ var n = 0;
 var tags = [];
 var adder = createAddTag();
 adder.addEventListener('click', function(){createTag(++n);}, false);
+
+//edit by Nick - set information into localstorage
+chrome.runtime.sendMessage({method: "setInfo", key: 1, url:"http://www.google.com.tw",descri:"Amazing",image:"/images/1.jpg"}, function(response) {
+	console.log(response.data);
+});
+chrome.runtime.sendMessage({method: "setInfo", key: 2, url:"http://tw.yahoo.com",descri:"wonderful.",image:"/images/2.jpg"}, function(response) {
+	console.log(response.data);
+});
+
 
 //add two tag for example
 n++;
