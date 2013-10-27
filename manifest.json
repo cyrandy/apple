@@ -7,8 +7,8 @@
 	"background": {
 		"scripts": ["dataInfo.js", "background.js"]
   	},
-  	"permissions": [
-	"storage"
+	"permissions": [
+		"storage"
   	],
 	
 	"content_scripts": [
