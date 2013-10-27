@@ -34,7 +34,7 @@ function getDescription(key)
 
 function getImg(key)
 {
-	StorageArea.get(List, function(obj)
+	chrome.storage.local.get(List, function(obj)
 	{
 		console.log(obj[key].Image);
 	});
