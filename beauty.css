@@ -9,3 +9,13 @@ body{
 	border-right: 50px solid #99FF99;
 	border-bottom: 25px solid transparent;
 }
+
+.tag{
+	width: 100px;
+	height: 50px;
+	border: 1px solid #FF3333;
+	position: fixed;
+	right: 0px;
+	background-color: #FF3333;
+	z-index: 10000;
+}

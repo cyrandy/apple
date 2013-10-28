@@ -37,7 +37,6 @@ function drop(ev)
             function(response) {
                 console.log(response.data);
         });
-
     } else if (type == "img") {
         console.log("img: "+ev.dataTransfer.getData("url"));
         chrome.runtime.sendMessage({
@@ -80,7 +79,7 @@ function createTag(n)
 
         tag.addEventListener('drop', drop, false);
         tag.addEventListener('dragover', allowDrop, false);
-        tag.addEventListener('click', getTagList(n), false);
+        tag.addEventListener('click',function(){getTagList(n);}, false);
 
         var arrow = document.createElement('div');
         arrow.className = 'wtf';
@@ -102,6 +101,7 @@ function createAddTag()
         var height = '50';
         var tag = document.createElement('div');
         tag.id = 'adder';
+		tag.className = 'tag';
         tag.style.width = '100px';
         tag.style.height = height+'px';
         tag.style.border = '1px';
@@ -118,7 +118,6 @@ function createAddTag()
         b.appendChild(tag);
         return tag;
 }
-
 
 //switch draggable property of every links on!
 var links = document.querySelectorAll('a');

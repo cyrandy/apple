@@ -1,4 +1,3 @@
-
 var List = {};
 
 function setInfo(tagid,url,description,image)
