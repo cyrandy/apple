@@ -95,7 +95,12 @@ header img {
   color: #600083;
 }
 
-/* line 28, ../sass/style.sass */
+/* line 27, ../sass/style.sass */
+.strong {
+  font-weight: bolder;
+}
+
+/* line 30, ../sass/style.sass */
 nav.main-nav {
   width: 100%;
   height: 58px;
@@ -107,7 +112,7 @@ nav.main-nav {
   -moz-box-shadow: 0px 1px 5px #bababa;
   box-shadow: 0px 1px 5px #bababa;
 }
-/* line 39, ../sass/style.sass */
+/* line 41, ../sass/style.sass */
 nav.main-nav .logo h1 {
   font-family: "Love Ya Like A Sister", Arial, serif;
   font-weight: 200;
@@ -118,7 +123,7 @@ nav.main-nav .logo h1 {
   top: 7px;
   left: 20px;
 }
-/* line 53, ../sass/style.sass */
+/* line 55, ../sass/style.sass */
 nav.main-nav ul li {
   float: right;
   display: inline-block;
@@ -127,42 +132,41 @@ nav.main-nav ul li {
   height: 33px;
   border-left: 1px solid rgba(0, 0, 0, 0.25);
 }
-/* line 61, ../sass/style.sass */
+/* line 63, ../sass/style.sass */
 nav.main-nav ul li a {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
 
-/* line 65, ../sass/style.sass */
+/* line 67, ../sass/style.sass */
 .content {
   height: 1000px;
   margin: 0 auto;
 }
-/* line 71, ../sass/style.sass */
+/* line 70, ../sass/style.sass */
 .content h2 {
   font-size: 2em;
 }
-/* line 73, ../sass/style.sass */
+/* line 72, ../sass/style.sass */
 .content .center-title {
   text-align: center;
   color: #505050;
 }
 
-/* line 77, ../sass/style.sass */
+/* line 76, ../sass/style.sass */
 .advantage {
   background: #ecf0f1;
   padding: 100px 0px;
-  width: 100%;
   text-align: center;
   -webkit-box-shadow: 0px 1px 5px #bababa;
   -moz-box-shadow: 0px 1px 5px #bababa;
   box-shadow: 0px 1px 5px #bababa;
 }
-/* line 84, ../sass/style.sass */
+/* line 81, ../sass/style.sass */
 .advantage .module-collection {
   width: 100%;
 }
-/* line 86, ../sass/style.sass */
+/* line 83, ../sass/style.sass */
 .advantage .module-collection:after {
   display: block;
   content: "";
@@ -170,7 +174,7 @@ nav.main-nav ul li a {
   clear: both;
   visibility: hidden;
 }
-/* line 92, ../sass/style.sass */
+/* line 89, ../sass/style.sass */
 .advantage .span1-module {
   display: inline-block;
   width: 31%;
@@ -178,18 +182,38 @@ nav.main-nav ul li a {
   text-align: center;
   margin-left: 3.5%;
 }
-/* line 98, ../sass/style.sass */
+/* line 95, ../sass/style.sass */
 .advantage .span1-module:first-child {
   margin-left: 0;
 }
-/* line 100, ../sass/style.sass */
+/* line 97, ../sass/style.sass */
 .advantage .span1-module img {
   margin: 0 auto;
 }
-/* line 102, ../sass/style.sass */
+/* line 99, ../sass/style.sass */
 .advantage .span1-module h2 {
   font-size: 1.5em;
   line-height: 1.5em;
   margin-top: 20px;
   color: #505050;
+}
+
+/* line 106, ../sass/style.sass */
+.steps h1 {
+  font-size: 4em;
+}
+/* line 109, ../sass/style.sass */
+.steps .section .wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  position: relative;
+}
+/* line 115, ../sass/style.sass */
+.steps .section h1 {
+  font-size: 6em;
+}
+/* line 118, ../sass/style.sass */
+.steps .section p {
+  font-size: 2em;
 }

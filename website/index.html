@@ -6,6 +6,9 @@
 	<title>JustFans</title>
 	<link rel="stylesheet" href="stylesheets/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Open+Sans' rel='stylesheet' type='text/css'>
+
+	
+
 	<style>
 	    #slides {
 	      display: none
@@ -115,11 +118,14 @@
 		  }
 		}
 	</style>
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+
+	<!-- // <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
   	<script src="jquery.slides.min.js"></script>
   	<script>
 		$(function(){
-		  $(".slide").slidesjs({
+		  $("#slides").slidesjs({
 		    width: 1440,
 		    height: 700,
 		    play: {
@@ -142,11 +148,29 @@
 		  });
 		});
 	</script>
+
+	<!-- full page js -->
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+	<!-- // <script type="text/javascript" src="js/jquery.fullPage.js"></script> -->
+	<!-- // <script type="text/javascript" src="examples.js"></script> -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var pepe = $.fn.fullpage({
+				slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
+			});
+			
+		});
+	</script>
 </head>
 <body>
 	<div class="container">
 		<header>
-			<div class="slide">
+			<div id="slides">
 				<img src="img/banner-big2.png" alt="">
 				<img src="img/banner-big1.png" alt="">
 				<img src="img/banner-big3.png" alt="">
@@ -169,16 +193,32 @@
 				<div class="module-collection">
 					<div class="span1-module">
 						<img src="img/flat/Watches.png" alt="">
+						<!-- <img src="img/flat/flat1.png" alt=""> -->
 						<h2>Safe Your Time</h2>
 					</div>					
 					<div class="span1-module">
 						<img src="img/flat/Pocket.png" alt="">
-						<h2>More <span class="facebook-color">Fans</span>, More <span class="yahoo-color">Shopping</span></h2>
+						<!-- <img src="img/flat/flat2.png" alt="">						 -->
+						<h2>More <span class="facebook-color strong">Fans</span>, More <span class="yahoo-color strong">Shopping</span></h2>
 					</div>
 					<div class="span1-module">
 						<img src="img/flat/Retina-Ready.png" alt="">
+						<!-- <img src="img/flat/flat3.png" alt="">						 -->
 						<h2>Just Sync It, Magic!</h2>
 					</div>
+				</div>
+			</div>
+			<div class="steps">
+				<div class="step-1 section active">
+					<h1>Link your account</h1>
+					<!-- <img src="img/y-plug.png" alt=""> -->
+				</div>
+				<div class="step-2 section">
+					<!-- <img src="img/" alt=""> -->
+					<h1>We'll sync it for you !</h1>
+				</div>
+				<div class="step-3 section">
+					<h1>Check your Fans Page!</h1>
 				</div>
 			</div>
 		</div>
