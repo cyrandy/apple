@@ -4,6 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JustFans</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
+	<script src="js/modernizr.custom.js"></script>
 	<link rel="stylesheet" href="stylesheets/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700,700italic|Gochi+Hand|Love+Ya+Like+A+Sister|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	
@@ -148,39 +151,24 @@
 		});
 	</script>
 
-	<!-- full page js -->
-	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-	<!-- // <script type="text/javascript" src="js/jquery.fullPage.js"></script> -->
-	<!-- // <script type="text/javascript" src="examples.js"></script> -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var pepe = $.fn.fullpage({
-				slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
-			});
-			
-		});
-	</script>
 </head>
 <body>
-	<div class="container">
 		<header>
 			<div id="slides" class="main-slide">
 				<div class="one-slide">
 					<img src="img/banner-big2.png" alt="">
 					<h1>Good commodities<br> but No <span class="yahoo-color">Buyer</span>?</h1>
+					<button class="btn btn-1 btn-1b purple">Let's Fix It</button>
 				</div>
 				<div class="one-slide">
 					<img src="img/banner-big1.png" alt="">					
 					<h1>We Want You!<br>Get Your <span class="highlight">Fans</span> Right Here!</h1>
+					<button class="btn btn-1 btn-1b orange">Get Your Fans</button>
 				</div>
 				<div class="one-slide">
 					<img src="img/banner-big3.png" alt="">					
 					<h1>Wondering who <span class="facebook-color">likes</span> your product?</h1>
+					<button class="btn btn-1 btn-1b blue">Checkout Your Record Chart</button>
 				</div>
 			</div>
 		</header>
@@ -217,7 +205,7 @@
 				</div>
 			</div>
 			<div class="steps">
-				<div class="step-1 active">
+				<div class="step-1">
 					<img src="img/flat/y-plug.png" alt="" class="y-plug">
 					<img src="img/flat/f-plug.png" alt="" class="f-plug">
 					<h1>Easy Link<br> Easy Go</h1>
@@ -237,6 +225,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+		<footer>
+			<div class="thanks-yahoo">
+				<h1>Particular Thanks</h1>
+				<img src="img/yahoo.png" alt="">			
+			</div>
+		</footer>
+
 </body>
 </html>
