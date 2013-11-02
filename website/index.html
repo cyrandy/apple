@@ -18,7 +18,8 @@
 	<!-- // <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
   	<script src="jquery.slides.min.js"></script>
   	<script src="slides.js"></script>
-  	
+ 	<script src="js/scrollable.js"></script>  	
+	<script src="js/jr.js"></script> 	
 
 </head>
 <body>
@@ -76,15 +77,15 @@
 			</div>
 			<div class="steps">
 				<div class="step-1">
-					<img src="img/flat/y-plug.png" alt="" class="y-plug">
-					<img src="img/flat/f-plug.png" alt="" class="f-plug">
+					<img id="yplug" src="img/flat/y-plug.png" alt="" class="y-plug">
+					<img id="fplug"src="img/flat/f-plug.png" alt="" class="f-plug">
 					<h1>Easy Link<br> Easy Go</h1>
 					<h2>You will finish this within only 3 steps.</h2>
 					<a href="">Let's do it!</a>
 					<!-- <img src="img/y-plug.png" alt=""> -->
 				</div>
 				<div class="step-2">
-					<img src="img/flat/sync.png" alt="">
+					<img id="sync" src="img/flat/sync.png" alt="">
 					<h1>Sync It for You !</h1>
 					<h2>Enjoy your <span class="strong">MAGIC</span> <span class="facebook-color">fan</span><span class="yahoo-color">sale</span> page!</h2>
 				</div>
@@ -103,4 +104,57 @@
 		</footer>
 
 </body>
+<script>
+$(function () {
+
+   $('#yplug')
+      .addClass('ui-corner-all')
+      .on('scrollin', function ( e, ui) {
+
+            $(this).stop().delay(500).animate({
+               left: '200px'
+			   }, 1000 );
+
+         })
+      .on('scrollout', function ( e, ui) {
+
+             $(this).stop().delay(500).animate({
+               left: '-200px'
+			   }, 10 );
+
+         })
+      .scrollable();
+	$('#fplug')
+      .addClass('ui-corner-all')
+      .on('scrollin', function ( e, ui) {
+
+            $(this).stop(100).delay(500).animate({
+               right: '200px'
+			   }, 1000 );
+
+         })
+      .on('scrollout', function ( e, ui) {
+
+             $(this).stop().delay(500).animate({
+               right: '-200px'
+			   }, 10 );
+
+         })
+      .scrollable();
+	
+	
+	$('#sync')
+		.addClass('ui-corner-all')
+		.on('scrollin', function(e, ui){
+			$(this).delay(800);
+			$(this).stop().delay(800).rotate({animateTo:360});
+			})
+		.on('scrollout', function(e, ui){
+			$(this).stop().rotate({animateTo:360});
+					
+			})
+		.scrollable();
+});
+
+</script>
 </html>
