@@ -103,22 +103,7 @@ header .main-slide h1 {
   margin-top: -120px;
 }
 
-/* line 40, ../sass/style.sass */
-.facebook-color {
-  color: #3b589c;
-}
-
 /* line 42, ../sass/style.sass */
-.yahoo-color {
-  color: #600083;
-}
-
-/* line 44, ../sass/style.sass */
-.strong {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* line 49, ../sass/style.sass */
 nav.main-nav {
   width: 100%;
   height: 58px;
@@ -130,7 +115,7 @@ nav.main-nav {
   -moz-box-shadow: 0px 1px 5px #bababa;
   box-shadow: 0px 1px 5px #bababa;
 }
-/* line 60, ../sass/style.sass */
+/* line 53, ../sass/style.sass */
 nav.main-nav .logo h1 {
   font-family: "Love Ya Like A Sister", Arial, serif;
   font-weight: 200;
@@ -141,11 +126,11 @@ nav.main-nav .logo h1 {
   top: 7px;
   left: 20px;
 }
-/* line 73, ../sass/style.sass */
+/* line 66, ../sass/style.sass */
 nav.main-nav ul {
   height: 58px;
 }
-/* line 75, ../sass/style.sass */
+/* line 68, ../sass/style.sass */
 nav.main-nav ul li {
   cursor: pointer;
   float: right;
@@ -153,7 +138,7 @@ nav.main-nav ul li {
   height: 100%;
   border-left: 1px solid rgba(0, 0, 0, 0.25);
 }
-/* line 84, ../sass/style.sass */
+/* line 77, ../sass/style.sass */
 nav.main-nav ul li a {
   display: inline-block;
   padding: 19px 30px;
@@ -161,7 +146,7 @@ nav.main-nav ul li a {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
-/* line 91, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
 nav.main-nav ul li a:hover {
   -webkit-box-shadow: inset 1px 1px 20px #bababa;
   -moz-box-shadow: inset 1px 1px 20px #bababa;
@@ -169,28 +154,28 @@ nav.main-nav ul li a:hover {
   color: #3f3f3f;
   border-bottom: 2px solid white;
 }
-/* line 95, ../sass/style.sass */
+/* line 88, ../sass/style.sass */
 nav.main-nav ul li a.active {
   background: #e67e22;
   color: white;
 }
 
-/* line 100, ../sass/style.sass */
+/* line 93, ../sass/style.sass */
 .content {
   height: 1000px;
   margin: 0 auto;
 }
-/* line 103, ../sass/style.sass */
+/* line 96, ../sass/style.sass */
 .content h2 {
   font-size: 2em;
 }
-/* line 105, ../sass/style.sass */
+/* line 98, ../sass/style.sass */
 .content .center-title {
   text-align: center;
   color: #505050;
 }
 
-/* line 109, ../sass/style.sass */
+/* line 102, ../sass/style.sass */
 .advantage {
   background: #ecf0f1;
   padding: 100px 0px;
@@ -199,11 +184,11 @@ nav.main-nav ul li a.active {
   -moz-box-shadow: 0px 1px 5px #bababa;
   box-shadow: 0px 1px 5px #bababa;
 }
-/* line 114, ../sass/style.sass */
+/* line 107, ../sass/style.sass */
 .advantage .module-collection {
   width: 100%;
 }
-/* line 116, ../sass/style.sass */
+/* line 109, ../sass/style.sass */
 .advantage .module-collection:after {
   display: block;
   content: "";
@@ -211,7 +196,7 @@ nav.main-nav ul li a.active {
   clear: both;
   visibility: hidden;
 }
-/* line 122, ../sass/style.sass */
+/* line 115, ../sass/style.sass */
 .advantage .span1-module {
   display: inline-block;
   width: 31%;
@@ -219,15 +204,15 @@ nav.main-nav ul li a.active {
   text-align: center;
   margin-left: 3.5%;
 }
-/* line 128, ../sass/style.sass */
+/* line 121, ../sass/style.sass */
 .advantage .span1-module:first-child {
   margin-left: 0;
 }
-/* line 130, ../sass/style.sass */
+/* line 123, ../sass/style.sass */
 .advantage .span1-module img {
   margin: 0 auto;
 }
-/* line 132, ../sass/style.sass */
+/* line 125, ../sass/style.sass */
 .advantage .span1-module h2 {
   font-size: 1.5em;
   line-height: 1.5em;
@@ -235,33 +220,53 @@ nav.main-nav ul li a.active {
   color: #505050;
 }
 
-/* line 138, ../sass/style.sass */
+/* line 131, ../sass/style.sass */
 .steps {
   text-align: center;
 }
-/* line 140, ../sass/style.sass */
+/* line 133, ../sass/style.sass */
 .steps h1 {
   font-size: 4em;
   line-height: 2em;
   color: #505050;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-/* line 145, ../sass/style.sass */
+/* line 138, ../sass/style.sass */
 .steps h2 {
   font-size: 2em;
   line-height: 2em;
   color: #e98d5b;
 }
-/* line 149, ../sass/style.sass */
+/* line 142, ../sass/style.sass */
 .steps div[class^="step"] {
   height: 750px;
   border-bottom: 1px solid gray;
 }
-/* line 152, ../sass/style.sass */
+/* line 145, ../sass/style.sass */
 .steps .y-plug {
   float: left;
 }
-/* line 154, ../sass/style.sass */
+/* line 147, ../sass/style.sass */
 .steps .f-plug {
   float: right;
+}
+
+/* line 150, ../sass/style.sass */
+.highlight {
+  color: #f3560a;
+}
+
+/* line 152, ../sass/style.sass */
+.facebook-color {
+  color: #3b589c;
+}
+
+/* line 154, ../sass/style.sass */
+.yahoo-color {
+  color: #600083;
+}
+
+/* line 156, ../sass/style.sass */
+.strong {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
