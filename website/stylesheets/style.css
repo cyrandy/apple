@@ -249,11 +249,11 @@ nav.main-nav ul li a.active {
 }
 /* line 149, ../sass/style.sass */
 .steps .y-plug {
-  float: left;
+  position: absolute;
 }
 /* line 151, ../sass/style.sass */
 .steps .f-plug {
-  float: right;
+  position: absolute;
 }
 
 /* line 153, ../sass/style.sass */
@@ -298,7 +298,9 @@ footer .thanks-yahoo h1 {
 
 /* line 178, ../sass/style.sass */
 form {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
+  margin-top: 150px;
   width: 500px;
   height: 500px;
   background: url(../img/wg_blurred_backgrounds_1.jpg);
@@ -308,8 +310,8 @@ form {
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
   border-radius: 7px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  opacity: 0.6;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
