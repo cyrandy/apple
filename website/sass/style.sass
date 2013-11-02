@@ -3,6 +3,7 @@
 @import compass/css3/text-shadow
 @import compass/css3/filter
 $main-text-color: #505050
+$sub-text-color: #e98d5b
 $facebook-color: #3b589c
 $yahoo-color: #600083
 
@@ -17,15 +18,18 @@ header
 	@include box-shadow(0px 2px 15px #bababa)
 	// background: url(../img/frenchstucco.png)
 	background: url(../img/ricepaper.png)
-	img
-		@include filter(blur(10px))
+	.main-slide
+		img
+			@include filter(blur(10px))
 
 .facebook-color
 	color: $facebook-color
 .yahoo-color
 	color: $yahoo-color
 .strong
-	font-weight: bolder
+	// font-weight: bolder
+	@include text-shadow(1px 1px 2px rgba(0,0,0,0.3))
+
 
 nav.main-nav
 	width: 100%
@@ -103,21 +107,20 @@ nav.main-nav
 			color: $main-text-color
 
 .steps
+	text-align: center
 	h1
 		font-size: 4em
-	.section
-		.wrap
-			margin-left: auto
-			margin-right: auto
-			width: 960px
-			position: relative
-		
-		h1
-			font-size: 6em	
-		
-		p
-			font-size: 2em
-		
-		.section
-			text-align:center
-	
+		line-height: 2em
+		color: $main-text-color
+		@include text-shadow(1px 1px 2px rgba(0,0,0,0.3))
+	h2
+		font-size: 2em
+		line-height: 2em
+		color: $sub-text-color
+	div[class^="step"]
+		height: 750px
+		border-bottom: 1px solid gray
+	.y-plug
+		float: left
+	.f-plug
+		float: right

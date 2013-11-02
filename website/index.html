@@ -100,21 +100,21 @@
 		/* For smartphones */
 		@media (max-width: 480px) {
 		  .container {
-		    width: auto
+		    width: 100%;
 		  }
 		}
 
 		/* For smaller displays like laptops */
 		@media (min-width: 768px) and (max-width: 979px) {
 		  .container {
-		    width: 768px;
+		    width: 100%;
 		  }
 		}
 
 		/* For larger displays */
 		@media (min-width: 1200px) {
 		  .container {
-		    width: 1440px;
+		    width: 100%;
 		  }
 		}
 	</style>
@@ -170,7 +170,7 @@
 <body>
 	<div class="container">
 		<header>
-			<div id="slides">
+			<div id="slides" class="main-slide">
 				<img src="img/banner-big2.png" alt="">
 				<img src="img/banner-big1.png" alt="">
 				<img src="img/banner-big3.png" alt="">
@@ -209,16 +209,23 @@
 				</div>
 			</div>
 			<div class="steps">
-				<div class="step-1 section active">
-					<h1>Link your account</h1>
+				<div class="step-1 active">
+					<img src="img/flat/y-plug.png" alt="" class="y-plug">
+					<img src="img/flat/f-plug.png" alt="" class="f-plug">
+					<h1>Link Your Account</h1>
+					<h2>You will finish this within only 3 steps.</h2>
+					<a href="">Let's do it!</a>
 					<!-- <img src="img/y-plug.png" alt=""> -->
 				</div>
-				<div class="step-2 section">
-					<!-- <img src="img/" alt=""> -->
-					<h1>We'll sync it for you !</h1>
+				<div class="step-2">
+					<img src="img/flat/sync.png" alt="">
+					<h1>Sync It for You !</h1>
+					<h2>Enjoy your <span class="strong">MAGIC</span> <span class="facebook-color">fan</span><span class="yahoo-color">sale</span> page!</h2>
 				</div>
-				<div class="step-3 section">
-					<h1>Check your Fans Page!</h1>
+				<div class="step-3">
+					<img src="img/flat/conversion.png" alt="">
+					<h1>Checkout Your Conversion</h1>
+					<h2>Easy to use and understand your customer.</h2>
 				</div>
 			</div>
 		</div>
