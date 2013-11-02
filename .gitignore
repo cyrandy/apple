@@ -1,2 +1,12 @@
 .DS_Store
 website/.sass-cache/
+
+# Ignore bundler config
+/yahoo2013/.bundle
+
+# Ignore the default SQLite database.
+/yahoo2013/db/*.sqlite3
+
+# Ignore all logfiles and tempfiles.
+/yahoo2013/log/*.log
+/yahoo2013/tmp
