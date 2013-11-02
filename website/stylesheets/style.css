@@ -64,13 +64,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 10, ../sass/style.sass */
+/* line 12, ../sass/style.sass */
 body {
   font-family: "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", "Open Sans", sans-serif, cursive;
   background: url(../img/frenchstucco.png);
 }
 
-/* line 16, ../sass/style.sass */
+/* line 18, ../sass/style.sass */
 header {
   position: relative;
   -webkit-box-shadow: 0px 2px 15px #bababa;
@@ -78,29 +78,29 @@ header {
   box-shadow: 0px 2px 15px #bababa;
   background: url(../img/ricepaper.png);
 }
-/* line 22, ../sass/style.sass */
+/* line 24, ../sass/style.sass */
 header .main-slide img {
   -webkit-filter: blur(10px);
   -moz-filter: blur(10px);
   filter: blur(10px);
 }
 
-/* line 25, ../sass/style.sass */
+/* line 27, ../sass/style.sass */
 .facebook-color {
   color: #3b589c;
 }
 
-/* line 27, ../sass/style.sass */
+/* line 29, ../sass/style.sass */
 .yahoo-color {
   color: #600083;
 }
 
-/* line 29, ../sass/style.sass */
+/* line 31, ../sass/style.sass */
 .strong {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* line 34, ../sass/style.sass */
+/* line 36, ../sass/style.sass */
 nav.main-nav {
   width: 100%;
   height: 58px;
@@ -112,48 +112,65 @@ nav.main-nav {
   -moz-box-shadow: 0px 1px 5px #bababa;
   box-shadow: 0px 1px 5px #bababa;
 }
-/* line 45, ../sass/style.sass */
+/* line 47, ../sass/style.sass */
 nav.main-nav .logo h1 {
   font-family: "Love Ya Like A Sister", Arial, serif;
   font-weight: 200;
   font-size: 45px;
-  color: #d74c00;
+  color: #e67e22;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 7px;
   left: 20px;
 }
-/* line 59, ../sass/style.sass */
+/* line 60, ../sass/style.sass */
+nav.main-nav ul {
+  height: 58px;
+}
+/* line 62, ../sass/style.sass */
 nav.main-nav ul li {
+  cursor: pointer;
   float: right;
   display: inline-block;
-  padding: 5px 30px;
-  padding-top: 20px;
-  height: 33px;
+  height: 100%;
   border-left: 1px solid rgba(0, 0, 0, 0.25);
 }
-/* line 67, ../sass/style.sass */
+/* line 71, ../sass/style.sass */
 nav.main-nav ul li a {
+  display: inline-block;
+  padding: 19px 30px;
+  font-size: 1.2em;
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
+/* line 78, ../sass/style.sass */
+nav.main-nav ul li a:hover {
+  background: #2ecc71;
+  color: white;
+  border-bottom: 2px solid white;
+}
+/* line 82, ../sass/style.sass */
+nav.main-nav ul li a.active {
+  background: #e67e22;
+  color: white;
+}
 
-/* line 71, ../sass/style.sass */
+/* line 87, ../sass/style.sass */
 .content {
   height: 1000px;
   margin: 0 auto;
 }
-/* line 74, ../sass/style.sass */
+/* line 90, ../sass/style.sass */
 .content h2 {
   font-size: 2em;
 }
-/* line 76, ../sass/style.sass */
+/* line 92, ../sass/style.sass */
 .content .center-title {
   text-align: center;
   color: #505050;
 }
 
-/* line 80, ../sass/style.sass */
+/* line 96, ../sass/style.sass */
 .advantage {
   background: #ecf0f1;
   padding: 100px 0px;
@@ -162,11 +179,11 @@ nav.main-nav ul li a {
   -moz-box-shadow: 0px 1px 5px #bababa;
   box-shadow: 0px 1px 5px #bababa;
 }
-/* line 85, ../sass/style.sass */
+/* line 101, ../sass/style.sass */
 .advantage .module-collection {
   width: 100%;
 }
-/* line 87, ../sass/style.sass */
+/* line 103, ../sass/style.sass */
 .advantage .module-collection:after {
   display: block;
   content: "";
@@ -174,7 +191,7 @@ nav.main-nav ul li a {
   clear: both;
   visibility: hidden;
 }
-/* line 93, ../sass/style.sass */
+/* line 109, ../sass/style.sass */
 .advantage .span1-module {
   display: inline-block;
   width: 31%;
@@ -182,15 +199,15 @@ nav.main-nav ul li a {
   text-align: center;
   margin-left: 3.5%;
 }
-/* line 99, ../sass/style.sass */
+/* line 115, ../sass/style.sass */
 .advantage .span1-module:first-child {
   margin-left: 0;
 }
-/* line 101, ../sass/style.sass */
+/* line 117, ../sass/style.sass */
 .advantage .span1-module img {
   margin: 0 auto;
 }
-/* line 103, ../sass/style.sass */
+/* line 119, ../sass/style.sass */
 .advantage .span1-module h2 {
   font-size: 1.5em;
   line-height: 1.5em;
@@ -198,33 +215,33 @@ nav.main-nav ul li a {
   color: #505050;
 }
 
-/* line 109, ../sass/style.sass */
+/* line 125, ../sass/style.sass */
 .steps {
   text-align: center;
 }
-/* line 111, ../sass/style.sass */
+/* line 127, ../sass/style.sass */
 .steps h1 {
   font-size: 4em;
   line-height: 2em;
   color: #505050;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-/* line 116, ../sass/style.sass */
+/* line 132, ../sass/style.sass */
 .steps h2 {
   font-size: 2em;
   line-height: 2em;
   color: #e98d5b;
 }
-/* line 120, ../sass/style.sass */
+/* line 136, ../sass/style.sass */
 .steps div[class^="step"] {
   height: 750px;
   border-bottom: 1px solid gray;
 }
-/* line 123, ../sass/style.sass */
+/* line 139, ../sass/style.sass */
 .steps .y-plug {
   float: left;
 }
-/* line 125, ../sass/style.sass */
+/* line 141, ../sass/style.sass */
 .steps .f-plug {
   float: right;
 }

@@ -6,6 +6,8 @@ $main-text-color: #505050
 $sub-text-color: #e98d5b
 $facebook-color: #3b589c
 $yahoo-color: #600083
+$orange: #E67E22
+$green: #2ECC71
 
 body
 	font-family: "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", 'Open Sans', sans-serif, cursive
@@ -47,7 +49,7 @@ nav.main-nav
 			font-weight: 200
 			
 			font-size: 45px
-			color: #d74c00
+			color: $orange
 			@include text-shadow(1px 1px 3px rgba(0, 0, 0, 0.5))
 
 			position: absolute
@@ -56,17 +58,31 @@ nav.main-nav
 		
 
 	ul
+		height: 58px
 		li
+			cursor: pointer
 			float: right
 			display: inline-block
-			padding: 5px 30px
-			padding-top: 20px
-			height: 33px
+			// padding: 5px 30px
+			// padding-top: 20px
+			height: 100%
 			// background: #000
 			border-left: 1px solid rgba(#000, 0.25)
 			a
+				display: inline-block
+				padding: 19px 30px
+				font-size: 1.2em
+				// padding-top: 20px
 				color: rgba(#000, 0.5)
 				text-decoration: none
+				&:hover
+					background: $green
+					color: white
+					border-bottom: 2px solid white
+			a.active
+				background: $orange
+				color: white
+
 
 .content
 	height: 1000px
