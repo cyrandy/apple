@@ -21,8 +21,21 @@ header
 	// background: url(../img/frenchstucco.png)
 	background: url(../img/ricepaper.png)
 	.main-slide
+		text-align: center
 		img
-			@include filter(blur(10px))
+			@include filter(blur(15px))
+		h1
+			width: 100%
+			margin: 0 auto
+			font-family: 'Gochi Hand', cursive
+			font-weight: bolder
+			font-size: 5em
+			@include text-shadow(1px 1px 3px rgba(0,0,0,0.45))
+			line-height: 1.8em
+			color: #fff
+			position: absolute
+			top: 50%
+			margin-top: -120px
 
 .facebook-color
 	color: $facebook-color
@@ -76,8 +89,8 @@ nav.main-nav
 				color: rgba(#000, 0.5)
 				text-decoration: none
 				&:hover
-					background: $green
-					color: white
+					@include box-shadow(inset 1px 1px 20px #bababa)
+					color: #3f3f3f
 					border-bottom: 2px solid white
 			a.active
 				background: $orange
