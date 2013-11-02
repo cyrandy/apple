@@ -9,169 +9,39 @@
 	<script src="js/modernizr.custom.js"></script>
 	<link rel="stylesheet" href="stylesheets/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700,700italic|Gochi+Hand|Love+Ya+Like+A+Sister|Open+Sans:400,700' rel='stylesheet' type='text/css'>
-	
+	<link rel="stylesheet" href="stylesheets/slides.css">
 
-	<style>
-	    #slides {
-	      display: none
-	    }
 
-	    #slides .slidesjs-navigation {
-	      margin-top:3px;
-	    }
-
-	    #slides .slidesjs-previous {
-	      margin-right: 5px;
-	      float: left;
-	    }
-
-	    #slides .slidesjs-next {
-	      margin-right: 5px;
-	      float: left;
-	    }
-
-	    .slidesjs-pagination {
-	      margin: 6px 0 0;
-	      float: right;
-	      list-style: none;
-	    }
-
-	    .slidesjs-pagination li {
-	      float: left;
-	      margin: 0 1px;
-	    }
-
-	    .slidesjs-pagination li a {
-	      display: block;
-	      width: 13px;
-	      height: 0;
-	      padding-top: 13px;
-	      background-image: url(img/pagination.png);
-	      background-position: 0 0;
-	      float: left;
-	      overflow: hidden;
-	    }
-
-	    .slidesjs-pagination li a.active,
-	    .slidesjs-pagination li a:hover.active {
-	      background-position: 0 -13px;
-	    }
-
-	    .slidesjs-pagination li a:hover {
-	      background-position: 0 -26px;
-	    }
-
-	    #slides a:link,
-	    #slides a:visited {
-	      color: #333;
-	    }
-
-	    #slides a:hover,
-	    #slides a:active {
-	      color: #9e2020;
-	    }
-
-	    .navbar {
-	      overflow: hidden;
-	    }
-	</style>
-	<style>
-		#slides {
-		  display: none;
-		}
-
-		.container {
-		  margin: 0 auto;
-		}
-
-		.slidesjs-navigation, .slidesjs-pagination {
-			display: none;
-		}
-
-		/* For tablets & smart phones */
-		@media (max-width: 767px) {
-		  body {
-		    padding-left: 20px;
-		    padding-right: 20px;
-		  }
-		  .container {
-		    width: auto;;
-		  }
-		}
-
-		/* For smartphones */
-		@media (max-width: 480px) {
-		  .container {
-		    width: 100%;
-		  }
-		}
-
-		/* For smaller displays like laptops */
-		@media (min-width: 768px) and (max-width: 979px) {
-		  .container {
-		    width: 100%;
-		  }
-		}
-
-		/* For larger displays */
-		@media (min-width: 1200px) {
-		  .container {
-		    width: 100%;
-		  }
-		}
-	</style>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
 
 	<!-- // <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
   	<script src="jquery.slides.min.js"></script>
-  	<script>
-		$(function(){
-		  $("#slides").slidesjs({
-		    width: 1440,
-		    height: 700,
-		    play: {
-		  active: true,
-		    // [boolean] Generate the play and stop buttons.
-		    // You cannot use your own buttons. Sorry.
-		  effect: "slide",
-		    // [string] Can be either "slide" or "fade".
-		  interval: 5000,
-		    // [number] Time spent on each slide in milliseconds.
-		  auto: true,
-		    // [boolean] Start playing the slideshow on load.
-		  swap: false,
-		    // [boolean] show/hide stop and play buttons
-		  pauseOnHover: true,
-		    // [boolean] pause a playing slideshow on hover
-		  restartDelay: 5000
-		    // [number] restart delay on inactive slideshow
-		}
-		  });
-		});
-	</script>
+  	<script src="slides.js"></script>
+  	
 
 </head>
 <body>
-		<header>
-			<div id="slides" class="main-slide">
-				<div class="one-slide">
-					<img src="img/banner-big2.png" alt="">
-					<h1>Good commodities<br> but No <span class="yahoo-color">Buyer</span>?</h1>
-					<button class="btn btn-1 btn-1b purple">Let's Fix It</button>
-				</div>
-				<div class="one-slide">
-					<img src="img/banner-big1.png" alt="">					
-					<h1>We Want You!<br>Get Your <span class="highlight">Fans</span> Right Here!</h1>
-					<button class="btn btn-1 btn-1b orange">Get Your Fans</button>
-				</div>
-				<div class="one-slide">
-					<img src="img/banner-big3.png" alt="">					
-					<h1>Wondering who <span class="facebook-color">likes</span> your product?</h1>
-					<button class="btn btn-1 btn-1b blue">Checkout Your Record Chart</button>
-				</div>
+	<header>
+		<div id="slides" class="main-slide">
+			<div class="one-slide">
+				<img src="img/banner-big2.png" alt="">
+				<h1>Good commodities<br> but No <span class="yahoo-color">Buyer</span>?</h1>
+				<button class="btn btn-1 btn-1b purple">Let's Fix It</button>
 			</div>
-		</header>
+			<div class="one-slide">
+				<img src="img/banner-big1.png" alt="">					
+				<h1>We Want You!<br>Get Your <span class="highlight">Fans</span> Right Here!</h1>
+				<button class="btn btn-1 btn-1b orange">Get Your Fans</button>
+			</div>
+			<div class="one-slide">
+				<img src="img/banner-big3.png" alt="">					
+				<h1>Wondering who <span class="facebook-color">likes</span> your product?</h1>
+				<button class="btn btn-1 btn-1b blue">Checkout Your Record Chart</button>
+			</div>
+		</div>
+	</header>
+		
 		<nav class="main-nav">
 			<div class="logo">
 				<h1>JustFans</h1>
