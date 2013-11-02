@@ -1,13 +1,29 @@
 @import compass/reset
 @import compass/css3/box-shadow
 @import compass/css3/text-shadow
+@import compass/css3/filter
+$main-text-color: #505050
+$facebook-color: #3b589c
+$yahoo-color: #600083
 
 body
-	font-family: 'Open Sans', sans-serif, cursive
+	font-family: "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", 'Open Sans', sans-serif, cursive
+	// background: url(../img/ricepaper.png)
 	background: url(../img/frenchstucco.png)
+
 
 header 
 	position: relative
+	@include box-shadow(0px 2px 15px #bababa)
+	// background: url(../img/frenchstucco.png)
+	background: url(../img/ricepaper.png)
+	img
+		@include filter(blur(10px))
+
+.facebook-color
+	color: $facebook-color
+.yahoo-color
+	color: $yahoo-color
 
 nav.main-nav
 	width: 100%
@@ -48,5 +64,43 @@ nav.main-nav
 
 .content
 	height: 1000px
-	width: 100%
+	// max-width: 950px
+	margin: 0 auto
+	// padding: 40px
 	// background: #000
+	h2
+		font-size: 2em
+	.center-title
+		text-align: center
+		color: $main-text-color
+
+.advantage
+	background: #ECF0F1
+	padding: 100px 0px
+	// margin-top: -40px
+	width: 100%
+	text-align: center
+	@include box-shadow(0px 1px 5px #bababa)
+	.module-collection
+		width: 100%
+		&:after
+			display: block
+			content: ""
+			height: 0
+			clear: both
+			visibility: hidden
+	.span1-module
+		display: inline-block
+		width: 31%
+		float: left
+		text-align: center
+		margin-left: 3.5%
+		&:first-child
+			margin-left: 0
+		img
+			margin: 0 auto
+		h2
+			font-size: 1.5em
+			line-height: 1.5em
+			margin-top: 20px
+			color: $main-text-color
