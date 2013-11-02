@@ -78,19 +78,18 @@ header {
   box-shadow: 0px 2px 15px #bababa;
   background: url(../img/ricepaper.png);
 }
-
 /* line 23, ../sass/style.sass */
-.main-slide {
+header .main-slide {
   text-align: center;
 }
 /* line 25, ../sass/style.sass */
-.main-slide img {
+header .main-slide img {
   -webkit-filter: blur(15px);
   -moz-filter: blur(15px);
   filter: blur(15px);
 }
 /* line 27, ../sass/style.sass */
-.main-slide h1 {
+header .main-slide h1 {
   width: 100%;
   margin: 0 auto;
   font-family: "Gochi Hand", cursive;
@@ -104,7 +103,7 @@ header {
   margin-top: -120px;
 }
 /* line 39, ../sass/style.sass */
-.main-slide button {
+header .main-slide button {
   position: absolute;
   bottom: 10%;
   margin-top: -120px;
