@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 17, ../../../../../.rbenv/versions/custom-2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -63,18 +64,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 5, ../sass/style.sass */
+/* line 9, ../sass/style.sass */
 body {
-  font-family: "Open Sans", sans-serif, cursive;
+  font-family: "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", "Open Sans", sans-serif, cursive;
   background: url(../img/frenchstucco.png);
 }
 
-/* line 9, ../sass/style.sass */
+/* line 15, ../sass/style.sass */
 header {
   position: relative;
+  -webkit-box-shadow: 0px 2px 15px #bababa;
+  -moz-box-shadow: 0px 2px 15px #bababa;
+  box-shadow: 0px 2px 15px #bababa;
+  background: url(../img/ricepaper.png);
+}
+/* line 20, ../sass/style.sass */
+header img {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  filter: blur(10px);
 }
 
-/* line 12, ../sass/style.sass */
+/* line 23, ../sass/style.sass */
+.facebook-color {
+  color: #3b589c;
+}
+
+/* line 25, ../sass/style.sass */
+.yahoo-color {
+  color: #600083;
+}
+
+/* line 28, ../sass/style.sass */
 nav.main-nav {
   width: 100%;
   height: 58px;
@@ -86,7 +107,7 @@ nav.main-nav {
   -moz-box-shadow: 0px 1px 5px #bababa;
   box-shadow: 0px 1px 5px #bababa;
 }
-/* line 23, ../sass/style.sass */
+/* line 39, ../sass/style.sass */
 nav.main-nav .logo h1 {
   font-family: "Love Ya Like A Sister", Arial, serif;
   font-weight: 200;
@@ -97,7 +118,7 @@ nav.main-nav .logo h1 {
   top: 7px;
   left: 20px;
 }
-/* line 37, ../sass/style.sass */
+/* line 53, ../sass/style.sass */
 nav.main-nav ul li {
   float: right;
   display: inline-block;
@@ -106,14 +127,69 @@ nav.main-nav ul li {
   height: 33px;
   border-left: 1px solid rgba(0, 0, 0, 0.25);
 }
-/* line 45, ../sass/style.sass */
+/* line 61, ../sass/style.sass */
 nav.main-nav ul li a {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
 
-/* line 49, ../sass/style.sass */
+/* line 65, ../sass/style.sass */
 .content {
   height: 1000px;
+  margin: 0 auto;
+}
+/* line 71, ../sass/style.sass */
+.content h2 {
+  font-size: 2em;
+}
+/* line 73, ../sass/style.sass */
+.content .center-title {
+  text-align: center;
+  color: #505050;
+}
+
+/* line 77, ../sass/style.sass */
+.advantage {
+  background: #ecf0f1;
+  padding: 100px 0px;
   width: 100%;
+  text-align: center;
+  -webkit-box-shadow: 0px 1px 5px #bababa;
+  -moz-box-shadow: 0px 1px 5px #bababa;
+  box-shadow: 0px 1px 5px #bababa;
+}
+/* line 84, ../sass/style.sass */
+.advantage .module-collection {
+  width: 100%;
+}
+/* line 86, ../sass/style.sass */
+.advantage .module-collection:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 92, ../sass/style.sass */
+.advantage .span1-module {
+  display: inline-block;
+  width: 31%;
+  float: left;
+  text-align: center;
+  margin-left: 3.5%;
+}
+/* line 98, ../sass/style.sass */
+.advantage .span1-module:first-child {
+  margin-left: 0;
+}
+/* line 100, ../sass/style.sass */
+.advantage .span1-module img {
+  margin: 0 auto;
+}
+/* line 102, ../sass/style.sass */
+.advantage .span1-module h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-top: 20px;
+  color: #505050;
 }

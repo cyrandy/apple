@@ -49,34 +49,38 @@
 
 	    .slidesjs-pagination li a.active,
 	    .slidesjs-pagination li a:hover.active {
-	      background-position: 0 -13px
+	      background-position: 0 -13px;
 	    }
 
 	    .slidesjs-pagination li a:hover {
-	      background-position: 0 -26px
+	      background-position: 0 -26px;
 	    }
 
 	    #slides a:link,
 	    #slides a:visited {
-	      color: #333
+	      color: #333;
 	    }
 
 	    #slides a:hover,
 	    #slides a:active {
-	      color: #9e2020
+	      color: #9e2020;
 	    }
 
 	    .navbar {
-	      overflow: hidden
+	      overflow: hidden;
 	    }
 	</style>
 	<style>
 		#slides {
-		  display: none
+		  display: none;
 		}
 
 		.container {
-		  margin: 0 auto
+		  margin: 0 auto;
+		}
+
+		.slidesjs-navigation, .slidesjs-pagination {
+			display: none;
 		}
 
 		/* For tablets & smart phones */
@@ -86,7 +90,7 @@
 		    padding-right: 20px;
 		  }
 		  .container {
-		    width: auto
+		    width: auto;;
 		  }
 		}
 
@@ -100,14 +104,14 @@
 		/* For smaller displays like laptops */
 		@media (min-width: 768px) and (max-width: 979px) {
 		  .container {
-		    width: 724px
+		    width: 768px;
 		  }
 		}
 
 		/* For larger displays */
 		@media (min-width: 1200px) {
 		  .container {
-		    width: 1440px
+		    width: 1440px;
 		  }
 		}
 	</style>
@@ -117,9 +121,9 @@
 		$(function(){
 		  $(".slide").slidesjs({
 		    width: 1440,
-		    height: 486,
+		    height: 700,
 		    play: {
-		  active: true,
+		  active: false,
 		    // [boolean] Generate the play and stop buttons.
 		    // You cannot use your own buttons. Sorry.
 		  effect: "slide",
@@ -143,8 +147,9 @@
 	<div class="container">
 		<header>
 			<div class="slide">
-				<img src="img/banner1.png" alt="">
-				<img src="img/banner2.png" alt="">
+				<img src="img/banner-big2.png" alt="">
+				<img src="img/banner-big1.png" alt="">
+				<img src="img/banner-big3.png" alt="">
 			</div>
 		</header>
 		<nav class="main-nav">
@@ -159,7 +164,23 @@
 			</ul>
 		</nav>
 		<div class="content">
-			
+			<!-- <h2 class="center-title">整個Faceebook  都是我的大賣場</h2> -->
+			<div class="advantage">
+				<div class="module-collection">
+					<div class="span1-module">
+						<img src="img/flat/Watches.png" alt="">
+						<h2>Safe Your Time</h2>
+					</div>					
+					<div class="span1-module">
+						<img src="img/flat/Pocket.png" alt="">
+						<h2>More <span class="facebook-color">Fans</span>, More <span class="yahoo-color">Shopping</span></h2>
+					</div>
+					<div class="span1-module">
+						<img src="img/flat/Retina-Ready.png" alt="">
+						<h2>Just Sync It, Magic!</h2>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
