@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yahoo2013</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<script type="text/javascript">
+  window.fbAsyncInit = function () {
+  FB.init({appId: <%= FB_APP_ID %>, frictionlessRequests: true, status: true, cookie: true, oauth: true, xfbml: true});
+  FB.getLoginStatus(function(response) {
+    //console.log(response);
+    if (response.authResponse) {
+      $.ajax({
+        type: "POST",
+        url: "/facebook/handle_access_token",
+        data: response,
+        cache: false
+        });
+    }
+    else {
+      top.location.href = "http://apps.facebook.com/crosswordrush";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
