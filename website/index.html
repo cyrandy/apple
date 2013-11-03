@@ -110,7 +110,7 @@
 				<img src="img/yahoo.png" alt="">			
 			</div>
 			<audio id="musix" controls>
-				<source src="./media/y.mp3">
+				<source src="media/y.mp3" type='audio/mpeg'>
 			</audio>
 		</footer>
 
@@ -154,7 +154,6 @@ $(function () {
       .scrollable();
 	
 	$('#sync')
-		.addClass('ui-corner-all')
 		.on('scrollin', function(e, ui){
 			$(this).delay(0);
 			$(this).stop().delay(800).rotate({animateTo:1080});
@@ -168,8 +167,8 @@ $(function () {
 
 		.addClass('ui-corner-all')
 		.on('scrollin', function(e, ui){
-			//alert('haha');
-			//$('#audio').play();
+			var a = document.getElementById('musix');
+			a.play();
 			})
 		.scrollable();
 	$('.purple, .orange, .blue, .do-it').click(function(){
