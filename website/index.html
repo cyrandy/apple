@@ -109,7 +109,7 @@
 				<h1>Particular Thanks</h1>
 				<img src="img/yahoo.png" alt="">			
 			</div>
-			<audio id="musix" controls>
+			<audio id="musix" >
 				<source src="media/y.mp3" type='audio/mpeg'>
 			</audio>
 		</footer>
@@ -168,7 +168,9 @@ $(function () {
 		.addClass('ui-corner-all')
 		.on('scrollin', function(e, ui){
 			var a = document.getElementById('musix');
+			a.playbackRate = 2;
 			a.play();
+
 			})
 		.scrollable();
 	$('.purple, .orange, .blue, .do-it').click(function(){
