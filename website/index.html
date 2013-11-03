@@ -27,17 +27,17 @@
 			<div class="one-slide">
 				<img src="img/banner-big2.png" alt="">
 				<h1>Good commodities<br> but No <span class="yahoo-color">Buyer</span>?</h1>
-				<button class="btn btn-1 btn-1b purple">Let's Fix It</button>
+				<button class='getfans' class="btn btn-1 btn-1b purple">Let's Fix It</button>
 			</div>
 			<div class="one-slide">
 				<img src="img/banner-big1.png" alt="">					
 				<h1>We Want You!<br>Get Your <span class="highlight">Fans</span> Right Here!</h1>
-				<button class="btn btn-1 btn-1b orange">Get Your Fans</button>
+				<button class='getfans' class="btn btn-1 btn-1b orange">Get Your Fans</button>
 			</div>
 			<div class="one-slide">
 				<img src="img/banner-big3.png" alt="">					
 				<h1>Wondering who <span class="facebook-color">likes</span> your product?</h1>
-				<button class="btn btn-1 btn-1b blue">Checkout Your Record Chart</button>
+				<button class='getfans' class="btn btn-1 btn-1b blue">Checkout Your Record Chart</button>
 			</div>
 		</div>
 	</header>
@@ -48,7 +48,7 @@
 			</div>
 			<ul>
 				<li><a href="" >About & Contact</a></li>
-				<li><a href=""><span class="highlight strong">Get Fans!</span></a></li>
+				<li><a href="getfans.html"><span class="highlight strong">Get Fans!</span></a></li>
 				<li><a href="">About</a></li>
 
 			</ul>
@@ -75,7 +75,7 @@
 				</div>
 			</div>
 			<div class="steps">
-				<div class="step-1">
+				<div class="step-1" id='s1'>
 					<img id="yplug" src="img/flat/y-plug.png" alt="" class="y-plug">
 					<img id="fplug"src="img/flat/f-plug.png" alt="" class="f-plug">
 					<h1>Easy Link<br> Easy Go</h1>
@@ -83,12 +83,12 @@
 					<a href="">Let's do it!</a>
 					<!-- <img src="img/y-plug.png" alt=""> -->
 				</div>
-				<div class="step-2">
+				<div class="step-2" id='s2'>
 					<img id="sync" src="img/flat/sync.png" alt="">
 					<h1>Sync It for You !</h1>
 					<h2>Enjoy your <span class="strong">MAGIC</span> <span class="facebook-color">fan</span><span class="yahoo-color">sale</span> page!</h2>
 				</div>
-				<div class="step-3">
+				<div class="step-3" id='s3'>
 					<img class="conversion" src="img/flat/conversion-1.png" alt="">
 					<img id='ball' class="conversion" src="img/flat/conversion-ball.png" alt="">
 					<img id='num' class="conversion" src="img/flat/conversion-num.png" alt="">
@@ -120,7 +120,7 @@ $(function () {
       .on('scrollout', function ( e, ui) {
 
              $(this).stop().delay(500).animate({
-               left: '-200px'
+               left: '-300px'
 			   }, 10 );
 
          })
@@ -137,26 +137,29 @@ $(function () {
       .on('scrollout', function ( e, ui) {
 
              $(this).stop().delay(500).animate({
-               right: '-200px'
+               right: '-300px'
 			   }, 10 );
 
          })
       .scrollable();
 	
-	
 	$('#sync')
 		.addClass('ui-corner-all')
 		.on('scrollin', function(e, ui){
 			$(this).delay(800);
-			$(this).stop().delay(800).rotate({animateTo:360});
+			$(this).stop().delay(800).rotate({animateTo:1080});
 			})
 		.on('scrollout', function(e, ui){
-			$(this).stop().rotate({animateTo:360});
+			$(this).stop().delay(800).rotate({animateTo:360});
 					
 			})
 		.scrollable();
-	
-		/*
+
+	$('.getfans').click(function(){
+		window.location.href = "fanspage.html";
+		
+		});
+/*	
 	$('#ball')
       .addClass('ui-corner-all')
       .on('scrollin', function ( e, ui) {
@@ -168,8 +171,8 @@ $(function () {
 			   }, 1000 );
 
          })
-      .scrollable('goto',options);
-	*/
+      .scrollable();
+*/
 });
 
 </script>
