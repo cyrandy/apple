@@ -27,17 +27,17 @@
 			<div class="one-slide">
 				<img src="img/banner-big2.png" alt="">
 				<h1>Good commodities<br> but No <span class="yahoo-color">Buyer</span>?</h1>
-				<button class='getfans' class="btn btn-1 btn-1b purple">Let's Fix It</button>
+				<button class="btn btn-1 btn-1b purple">Let's Fix It</button>
 			</div>
 			<div class="one-slide">
 				<img src="img/banner-big1.png" alt="">					
 				<h1>We Want You!<br>Get Your <span class="highlight">Fans</span> Right Here!</h1>
-				<button class='getfans' class="btn btn-1 btn-1b orange">Get Your Fans</button>
+				<button class="btn btn-1 btn-1b orange">Get Your Fans</button>
 			</div>
 			<div class="one-slide">
 				<img src="img/banner-big3.png" alt="">					
 				<h1>Wondering who <span class="facebook-color">likes</span> your product?</h1>
-				<button class='getfans' class="btn btn-1 btn-1b blue">Checkout Your Record Chart</button>
+				<button  class="btn btn-1 btn-1b blue">Checkout Your Record Chart</button>
 			</div>
 		</div>
 	</header>
@@ -128,11 +128,7 @@ $(function () {
       .addClass('ui-corner-all')
       .on('scrollin', function ( e, ui) {
 
-<<<<<<< HEAD
-            $(this).stop().delay(500).animate({
-=======
             $(this).stop(100).delay(500).animate({
->>>>>>> cf2b087e692343379a56f385a4f64b62e7c22861
                right: '-300px'
 			   }, 1000 );
 
@@ -158,7 +154,7 @@ $(function () {
 			})
 		.scrollable();
 
-	$('.getfans').click(function(){
+	$('.purple, .orange, .blue').click(function(){
 		window.location.href = "fanspage.html";
 		
 		});
