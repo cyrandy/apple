@@ -90,8 +90,8 @@
 				</div>
 				<div class="step-3">
 					<img class="conversion" src="img/flat/conversion-1.png" alt="">
-					<img class="conversion" src="img/flat/conversion-ball.png" alt="">
-					<img class="conversion" src="img/flat/conversion-num.png" alt="">
+					<img id='ball' class="conversion" src="img/flat/conversion-ball.png" alt="">
+					<img id='num' class="conversion" src="img/flat/conversion-num.png" alt="">
 					<h1>Checkout Your Conversion</h1>
 					<h2>Easy to use and understand your customer.</h2>
 				</div>
@@ -113,7 +113,7 @@ $(function () {
       .on('scrollin', function ( e, ui) {
 
             $(this).stop().delay(500).animate({
-               left: '200px'
+               left: '-300px'
 			   }, 1000 );
 
          })
@@ -129,8 +129,8 @@ $(function () {
       .addClass('ui-corner-all')
       .on('scrollin', function ( e, ui) {
 
-            $(this).stop(100).delay(500).animate({
-               right: '200px'
+            $(this).stop().delay(500).animate({
+               right: '-300px'
 			   }, 1000 );
 
          })
@@ -155,6 +155,21 @@ $(function () {
 					
 			})
 		.scrollable();
+	
+		/*
+	$('#ball')
+      .addClass('ui-corner-all')
+      .on('scrollin', function ( e, ui) {
+
+            $(this).stop().delay(500).animate({
+               left: '475px',
+			   top: '500px',
+			   zIndex: '1000px'
+			   }, 1000 );
+
+         })
+      .scrollable('goto',options);
+	*/
 });
 
 </script>
