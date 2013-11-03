@@ -49,9 +49,9 @@ $obj2 = '4,50,3,8,20,17,10,30,28,15,21,0,1,3,20,25,32,35,4,3,2';
 					data : [<?php echo $obj1; ?>]
 				},
 				{
-					fillColor : "rgba(151,187,205,0.5)",
-					strokeColor : "rgba(151,187,205,1)",
-					pointColor : "rgba(151,187,205,1)",
+					fillColor : "rgba(26,188,156,0.5)",
+					strokeColor : "rgba(22,160,130,1)",
+					pointColor : "rgba(22,160,130,1)",
 					pointStrokeColor : "#fff",
 					data : [<?php echo $obj2;?>]
 				}
