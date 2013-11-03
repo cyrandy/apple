@@ -1,0 +1,233 @@
+@import compass/reset
+@import compass/css3/box-shadow
+@import compass/css3/text-shadow
+@import compass/css3/filter
+@import compass/css3/border-radius
+@import compass/css3/opacity
+$main-text-color: #505050
+$sub-text-color: #e98d5b
+$facebook-color: #3b589c
+$yahoo-color: #600083
+$orange: #E67E22
+$green: #2ECC71
+
+body
+	font-family: "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", 'Open Sans', sans-serif, cursive
+	// background: url(../img/ricepaper.png)
+	background: url(../img/frenchstucco.png)
+
+
+header 
+	position: relative
+	@include box-shadow(0px 2px 15px #bababa)
+	// background: url(../img/frenchstucco.png)
+	background: url(../img/ricepaper.png)
+	.main-slide
+		text-align: center
+		img
+			@include filter(blur(15px))
+		h1
+			width: 100%
+			margin: 0 auto
+			font-family: 'Gochi Hand', cursive
+			font-weight: bolder
+			font-size: 5em
+			@include text-shadow(1px 1px 3px rgba(0,0,0,0.45))
+			line-height: 1.8em
+			color: #fff
+			position: absolute
+			top: 50%
+			margin-top: -120px
+		button
+			position: absolute
+			bottom: 10%
+			margin-top: -120px
+
+
+nav.main-nav
+	width: 100%
+	height: 58px
+	position: fixed
+	top: 0
+	z-index: 10
+
+	background: rgba(255, 255, 255, 0.4)
+	@include box-shadow(0px 1px 5px #bababa)
+	
+	.logo
+		h1
+			font-family: 'Love Ya Like A Sister', Arial, serif
+			font-weight: 200
+			
+			font-size: 45px
+			color: $orange
+			@include text-shadow(1px 1px 3px rgba(0, 0, 0, 0.5))
+
+			position: absolute
+			top: 7px
+			left: 20px
+		
+
+	ul
+		height: 58px
+		li
+			cursor: pointer
+			float: right
+			display: inline-block
+			// padding: 5px 30px
+			// padding-top: 20px
+			height: 100%
+			// background: #000
+			border-left: 1px solid rgba(#000, 0.25)
+			a
+				display: inline-block
+				padding: 19px 30px
+				font-size: 1.2em
+				// padding-top: 20px
+				color: rgba(#000, 0.5)
+				text-decoration: none
+				&:hover
+					@include box-shadow(inset 1px 1px 20px #bababa)
+					color: #3f3f3f
+					border-bottom: 2px solid white
+			a.active
+				background: $orange
+				color: white
+
+
+.content
+	margin: 0 auto
+	h2
+		font-size: 2em
+	.center-title
+		text-align: center
+		color: $main-text-color
+
+.advantage
+	background: #ECF0F1
+	padding: 100px 0px
+	text-align: center
+	@include box-shadow(0px 1px 5px #bababa)
+	.module-collection
+		width: 100%
+		&:after
+			display: block
+			content: ""
+			height: 0
+			clear: both
+			visibility: hidden
+	.span1-module
+		display: inline-block
+		width: 31%
+		float: left
+		text-align: center
+		margin-left: 3.5%
+		&:first-child
+			margin-left: 0
+		img
+			margin: 0 auto
+		h2
+			font-size: 1.5em
+			line-height: 1.5em
+			margin-top: 20px
+			color: $main-text-color
+
+.steps
+	text-align: center
+	h1
+		font-size: 4em
+		line-height: 2em
+		color: $main-text-color
+		@include text-shadow(1px 1px 2px rgba(0,0,0,0.3))
+	h2
+		font-size: 2em
+		line-height: 2em
+		color: $sub-text-color
+	div[class^="step"]
+		height: 750px
+		border-bottom: 1px solid gray
+	.y-plug
+		position: absolute
+	.f-plug
+		position: absolute
+footer
+	position: relative
+	height: 750px
+	background: url(../img/hexellence_@2X.png)
+	.thanks-yahoo
+		h1
+			line-height: 3em
+			font-size: 1.4em
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -320px
+		margin-top: -170px
+.highlight
+	color: #f3560a
+.facebook-color
+	color: $facebook-color
+.yahoo-color
+	color: $yahoo-color
+.strong
+	// font-weight: bolder
+	@include text-shadow(1px 1px 2px rgba(0,0,0,0.3))
+
+
+
+form 
+	display: block
+	margin: 0 auto
+	margin-top: 150px
+	padding-top: 70px
+	width: 500px
+	height: 500px
+	background: url(../img/wg_blurred_backgrounds_1.jpg)
+	background-size: 500px 500px
+	@include border-radius(7px)
+	@include opacity(0.6)
+	@include box-shadow(0px 0px 15px rgba(0,0,0,0.6))
+
+	.fb-btn:hover, .yahoo-btn:hover
+		
+		background: rgba(#fff, 0.4)
+		color: #000
+		@include box-shadow(0px 0px 6px rgba(0,0,0,0.7))
+	.fb-btn, .yahoo-btn, .confirm-btn
+		display: block
+		width: 80%
+		margin: 20px auto
+		color: #fff
+	.fb-btn
+		// display: block
+		// width: 80%
+		// margin: 20px auto
+		background: $facebook-color
+	.yahoo-btn
+		// display: block
+		// width: 80%
+		// margin: 20px auto
+		background: $yahoo-color
+	.confirm-btn
+		width: 28%
+		padding: 21px
+		margin-top: 25px
+		background: $main-text-color
+		@include border-radius(50%)
+		&:hover
+			background: rgba(#000, 0.7)
+			color: #fff
+
+	input
+		display: block
+		margin: 0 auto
+		height: 71px
+		line-height: 50px
+		font-size: 1.2em
+		border: none
+		background: #fff
+		padding: 0 10px
+		width: 400px
+		@include opacity(0.4)
+		&:hover
+			@include opacity(0.6)

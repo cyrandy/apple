@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131102210226) do
+ActiveRecord::Schema.define(version: 20131103002344) do
 
   create_table "auctions", force: true do |t|
     t.string   "title"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20131102210226) do
     t.datetime "updated_at"
     t.text     "fb_page_access_token"
     t.string   "fb_picture"
+    t.text     "page_description"
+    t.string   "fb_fan_page"
   end
 
 end
