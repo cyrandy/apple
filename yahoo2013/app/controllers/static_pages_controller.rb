@@ -4,11 +4,24 @@ class StaticPagesController < ApplicationController
   before_filter :allow_iframe_requests, :only => [:fbauth]
   protect_from_forgery except: :fbauth
 
+  def reset
+    session.delete(:y_login)
+    session.delete(:fb_login)
+ 
+    render :nothing => true and return
+  end
+
+  def line
+    render :layout => false
+  end
+
   def getfans
-    if params[:fb_fan_page]
-      redirect_to :back if params[:fb_fan_page].empty?
-      fb_fan_page = /.*com\/(.*)\?.*/.match(params[:fb_fan_page])
-      current_user.update_attributes!(params[:fb_fan_page]) 
+    if params[:fan_page]
+      redirect_to :back if params[:fan_page].empty?
+      fb_fan_page = /.*com\/(.*)\?.*/.match(params[:fan_page])
+      logger.info fb_fan_page
+      current_user.update_attributes!(fb_fan_page: fb_fan_page[1]) 
+      redirect_to "/sync_page" and return
     end
     @fb_sign_in = fb_sign_in?
     @y_sign_in =  y_sign_in?
@@ -129,6 +142,10 @@ class StaticPagesController < ApplicationController
     render inline: top_location_redirect_script("/getfans") and return
   end
 
+  def sync_page
+
+  end
+
   def sync
     render :text => "Error" and return unless fb_sign_in? && y_sign_in?
 
@@ -153,18 +170,24 @@ class StaticPagesController < ApplicationController
           logger.info page_content
           page_description = /.*name\=.description.*content=\'(.*)\'>/.match(page_content)[1]
 
-          auction = current_user.auctions.find_by(guid: guid)
-          if auction
+          @auction = current_user.auctions.find_by(guid: guid)
+          if @auction
             # todo
           else
-            current_user.auctions.create!(title: title, link: link, guid: guid, img: img, price: price, description: page_description)
+            @auction = current_user.auctions.create!(title: title, link: link, guid: guid, img: img, price: price, description: page_description)
           end
           #redirect_to URI.escape("/facebook/post?name=#{title}&link=#{link}&pic=#{img}") and return
           #current_user.fb_page_graph.put_wall_post("test123 #test", {"name" => title, "link" => params[:link],
           #                        "caption" => "test", "description" => "description",
           #                        "picture" => img}, "192419394248940")
           messages = ["[#{title}]", page_description, "#{SITE_ROOT}/r?to=#{Base64.strict_encode64(link)}&obj=#{guid}&owner=#{yahoo_auction_id}"]
-          current_user.fb_page_graph.put_picture(img, {:message => messages.join("\r\n\r\n")})
+          if @auction.is_post
+            logger.info "ignore"
+          else
+            current_user.fb_page_graph.put_picture(img, {:message => messages.join("\r\n\r\n")})
+            @auction.update_attributes!(is_post: true)
+          end
+          logger.info "#{messages} finished"
         end
       end
     end

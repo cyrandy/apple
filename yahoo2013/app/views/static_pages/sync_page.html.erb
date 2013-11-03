@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JustFans</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700,700italic|Gochi+Hand|Love+Ya+Like+A+Sister|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheets/slides.css">
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+
+	<!-- // <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+  	<script src="jquery.slides.min.js"></script>
+  	<script src="slides.js"></script>
+ 	<script src="js/scrollable.js"></script>  	
+	<script src="js/jr.js"></script> 	
+	<link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+<div class="steps">
+  <img id="sync" src="img/flat/sync.png" alt="" style="margin-top: 10%;" />
+</div>
+<script type="text/javascript">
+        $('#sync')
+		.addClass('ui-corner-all')
+		.on('scrollin', function(e, ui){
+			$(this).delay(800);
+			$(this).stop().delay(800).rotate({animateTo:1080, duration: 10000});
+			})
+		.on('scrollout', function(e, ui){
+			$(this).stop().delay(800).rotate({animateTo:360, duration: 10000});
+					
+			})
+		.scrollable();
+
+	$('.purple, .orange, .blue .do-it').click(function(){
+		window.location.href = "getfans.html";
+		
+		});
+
+  $.get('/sync', function(data){ 
+    console.log(data); 
+    location.replace('/index.html')
+  });
+</script>
+</body>
+</html>

@@ -228,32 +228,48 @@ form
 	.fb-btn:hover, .yahoo-btn:hover
 		
 		background: rgba(#fff, 0.4)
-		color: #000
-		@include box-shadow(0px 0px 6px rgba(0,0,0,0.7))
+		// color: #000
+		@include box-shadow(0px 0px 6px rgba(0,0,0,0.9))
 	.fb-btn, .yahoo-btn, .confirm-btn
 		display: block
 		width: 80%
 		margin: 20px auto
 		color: #fff
 	.fb-btn
+		background: rgba(#fff, 0.4)
+		color: $facebook-color
+		// @include box-shadow(0px 0px 6px rgba(0,0,0,0.7))
+		border: 2px solid $facebook-color
 		// display: block
 		// width: 80%
 		// margin: 20px auto
-		background: $facebook-color
+		// background: $facebook-color
 	.yahoo-btn
+		background: rgba(#fff, 0.4)
+		color: $yahoo-color
+		// @include box-shadow(0px 0px 6px rgba(0,0,0,0.7))
+		border: 2px solid $yahoo-color
+
+
 		// display: block
 		// width: 80%
 		// margin: 20px auto
+		// background: $yahoo-color
+	.fb-primary
+		background: $facebook-color
+	.yahoo-primary
 		background: $yahoo-color
 	.confirm-btn
 		width: 28%
 		padding: 21px
 		margin-top: 25px
-		background: $main-text-color
+		background: rgba(#000, 0.7)
+		color: #fff
+
 		@include border-radius(50%)
 		&:hover
-			background: rgba(#000, 0.7)
-			color: #fff
+			background: $main-text-color
+			@include opacity(0.7)
 
 	input
 		display: block

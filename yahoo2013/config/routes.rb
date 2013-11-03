@@ -10,8 +10,12 @@ Yahoo2013::Application.routes.draw do
   get 'close' => 'static_pages#close_window'
   get 'sync' => 'static_pages#sync'
   get 'getfans' => 'static_pages#getfans'
+  get 'getfans.html' => 'static_pages#getfans'
 
   get 'r' => 'static_pages#record'
+  get 'reset' => 'static_pages#reset'
+  get 'sync_page' => 'static_pages#sync_page'
+  get 'line.html' => 'static_pages#line'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
