@@ -18,8 +18,7 @@ class StaticPagesController < ApplicationController
   def getfans
     if params[:fan_page]
       redirect_to :back if params[:fan_page].empty?
-      fb_fan_page = /.*com\/(.*)\?.*/.match(params[:fan_page])
-      logger.info fb_fan_page
+      fb_fan_page = /.*com\/(.*)(\?|$).*/.match(params[:fan_page])
       current_user.update_attributes!(fb_fan_page: fb_fan_page[1]) 
       redirect_to "/sync_page" and return
     end
@@ -71,11 +70,12 @@ class StaticPagesController < ApplicationController
     access_token = @oauth.get_access_token(params[:code])
     
     user = User.get_user_from_fb_access_token(current_user, @access_token)
-    user.get_page_access_token 
+    #user.get_page_access_token 
     fb_sign_in(user)
     
     render inline: top_location_redirect_script("/getfans") and return
-    #redirect_to FB_APP_SITE
+  rescue
+    redirect_to FB_APP_SITE
   end
 
   def close_window
@@ -132,9 +132,7 @@ class StaticPagesController < ApplicationController
     #File.open("kerker", "w") {|f| f.write response.body.force_encoding('utf-8')}
 
     response = session[:consumer].request(:get, "http://tw.bid.yahooapis.com/v1/ws/fetch/idmapping?format=json", access_token)
-    logger.info response.body
     yahoo_auction_id = JSON.parse(response.body)['response']['result']['data']['auid']
-    logger.info yahoo_auction_id
 
     user = User.get_user_from_y_token_and_verifier(current_user, oauth_token, oauth_verifier, yahoo_auction_id)
     y_sign_in(user) 
@@ -176,11 +174,12 @@ class StaticPagesController < ApplicationController
           else
             @auction = current_user.auctions.create!(title: title, link: link, guid: guid, img: img, price: price, description: page_description)
           end
+          result = current_user.fb_graph.get_object(current_user.fb_fan_page)
           #redirect_to URI.escape("/facebook/post?name=#{title}&link=#{link}&pic=#{img}") and return
           #current_user.fb_page_graph.put_wall_post("test123 #test", {"name" => title, "link" => params[:link],
           #                        "caption" => "test", "description" => "description",
           #                        "picture" => img}, "192419394248940")
-          messages = ["[#{title}]", page_description, "#{SITE_ROOT}/r?to=#{Base64.strict_encode64(link)}&obj=#{guid}&owner=#{yahoo_auction_id}"]
+          messages = ["[#{title}]", page_description, "#{SITE_ROOT}/r?to=#{Base64.strict_encode64(link)}&obj=#{guid}&owner=#{yahoo_auction_id}", "##{yahoo_auction_id} #JustFans ##{result["name"]}"]
           if @auction.is_post
             logger.info "ignore"
           else

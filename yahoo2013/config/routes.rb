@@ -16,6 +16,7 @@ Yahoo2013::Application.routes.draw do
   get 'reset' => 'static_pages#reset'
   get 'sync_page' => 'static_pages#sync_page'
   get 'line.html' => 'static_pages#line'
+  get 'line.php' => 'static_pages#line'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
