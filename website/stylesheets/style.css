@@ -383,15 +383,15 @@ form .fb-btn, form .yahoo-btn, form .confirm-btn {
   margin: 20px auto;
   color: white;
 }
-/* line 238, ../sass/style.sass */
-form .fb-btn {
+/* line 248, ../sass/style.sass */
+form .fb-primary {
   background: #3b589c;
 }
-/* line 243, ../sass/style.sass */
-form .yahoo-btn {
+/* line 250, ../sass/style.sass */
+form .yahoo-primary {
   background: #600083;
 }
-/* line 248, ../sass/style.sass */
+/* line 252, ../sass/style.sass */
 form .confirm-btn {
   width: 28%;
   padding: 21px;
@@ -403,12 +403,12 @@ form .confirm-btn {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 254, ../sass/style.sass */
+/* line 258, ../sass/style.sass */
 form .confirm-btn:hover {
   background: rgba(0, 0, 0, 0.7);
   color: white;
 }
-/* line 258, ../sass/style.sass */
+/* line 262, ../sass/style.sass */
 form input {
   display: block;
   margin: 0 auto;
@@ -422,18 +422,18 @@ form input {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
   opacity: 0.4;
 }
-/* line 269, ../sass/style.sass */
+/* line 273, ../sass/style.sass */
 form input:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
 
-/* line 273, ../sass/style.sass */
+/* line 277, ../sass/style.sass */
 canvas {
   display: block;
   margin: 50px auto;
 }
-/* line 274, ../sass/style.sass */
+/* line 278, ../sass/style.sass */
 canvas:first-child {
   margin: 100px auto;
 }
