@@ -26,18 +26,20 @@ header
 		text-align: center
 		img
 			@include filter(blur(15px))
+			@include opacity(0.6)
 		h1
 			width: 100%
 			margin: 0 auto
 			font-family: 'Gochi Hand', cursive
 			font-weight: bolder
 			font-size: 5em
-			@include text-shadow(1px 1px 3px rgba(0,0,0,0.45))
+			@include text-shadow(2px 2px 3px black)
 			line-height: 1.8em
 			color: #fff
 			position: absolute
 			top: 50%
 			margin-top: -120px
+		// .one h1
 		button
 			position: absolute
 			bottom: 10%
@@ -230,7 +232,7 @@ form
 		background: rgba(#fff, 0.4)
 		// color: #000
 		@include box-shadow(0px 0px 6px rgba(0,0,0,0.9))
-	.fb-btn, .yahoo-btn, .confirm-btn
+	.fb-btn, .yahoo-btn, .confirm-btn, .fb-primary, .yahoo-primary
 		display: block
 		width: 80%
 		margin: 20px auto
@@ -263,11 +265,13 @@ form
 		width: 28%
 		padding: 21px
 		margin-top: 25px
-		background: $main-text-color
+		background: rgba(#000, 0.7)
+		color: #fff
+
 		@include border-radius(50%)
 		&:hover
-			background: rgba(#000, 0.7)
-			color: #fff
+			background: $main-text-color
+			@include opacity(0.7)
 
 	input
 		display: block
