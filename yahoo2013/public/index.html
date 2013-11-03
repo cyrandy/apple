@@ -10,9 +10,8 @@
 	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700,700italic|Gochi+Hand|Love+Ya+Like+A+Sister|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="stylesheets/slides.css">
 
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 
 	<!-- // <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
   	<script src="jquery.slides.min.js"></script>
@@ -24,17 +23,17 @@
 <body>
 	<header>
 		<div id="slides" class="main-slide">
-			<div class="one-slide">
+			<div class="one-slide one">
 				<img src="img/banner-big2.png" alt="">
 				<h1>Good commodities<br> but No <span class="yahoo-color">Buyer</span>?</h1>
 				<button class="btn btn-1 btn-1b purple">Let's Fix It</button>
 			</div>
-			<div class="one-slide">
+			<div class="one-slide two">
 				<img src="img/banner-big1.png" alt="">					
 				<h1>We Want You!<br>Get Your <span class="highlight">Fans</span> Right Here!</h1>
 				<button class="btn btn-1 btn-1b orange">Get Your Fans</button>
 			</div>
-			<div class="one-slide">
+			<div class="one-slide three">
 				<img src="img/banner-big3.png" alt="">					
 				<h1>Wondering who <span class="facebook-color">likes</span> your product?</h1>
 				<button  class="btn btn-1 btn-1b blue">Checkout Your Record Chart</button>
@@ -109,6 +108,9 @@
 				<h1>Particular Thanks</h1>
 				<img src="img/yahoo.png" alt="">			
 			</div>
+			<audio id="musix" >
+				<source src="media/y.mp3" type='audio/mpeg'>
+			</audio>
 		</footer>
 
 </body>
@@ -119,14 +121,14 @@ $(function () {
       .addClass('ui-corner-all')
       .on('scrollin', function ( e, ui) {
 
-            $(this).stop().delay(500).animate({
+            $(this).stop().delay(50).animate({
                left: '-300px'
 			   }, 1000 );
 
          })
       .on('scrollout', function ( e, ui) {
 
-             $(this).stop().delay(500).animate({
+             $(this).stop().delay(50).animate({
                left: '-300px'
 			   }, 10 );
 
@@ -151,9 +153,8 @@ $(function () {
       .scrollable();
 	
 	$('#sync')
-		.addClass('ui-corner-all')
 		.on('scrollin', function(e, ui){
-			$(this).delay(800);
+			$(this).delay(0);
 			$(this).stop().delay(800).rotate({animateTo:1080});
 			})
 		.on('scrollout', function(e, ui){
@@ -161,8 +162,18 @@ $(function () {
 					
 			})
 		.scrollable();
+	$('#musix')
 
-	$('.purple, .orange, .blue .do-it').click(function(){
+		.addClass('ui-corner-all')
+		.on('scrollin', function(e, ui){
+			var a = document.getElementById('musix');
+			a.playbackRate = 2;
+			a.play();
+			a.currentTime = 0;
+
+			})
+		.scrollable();
+	$('.purple, .orange, .blue, .do-it').click(function(){
 		window.location.href = "getfans.html";
 		
 		});
