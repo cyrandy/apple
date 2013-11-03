@@ -55,7 +55,7 @@ nav.main-nav
 	@include box-shadow(0px 1px 5px #bababa)
 	
 	.logo
-		h1
+		a
 			font-family: 'Love Ya Like A Sister', Arial, serif
 			font-weight: 200
 			
@@ -134,9 +134,10 @@ nav.main-nav
 
 .steps
 	text-align: center
+	width: 100%
 	h1
 		font-size: 4em
-		line-height: 2em
+		line-height: 1.3em
 		color: $main-text-color
 		@include text-shadow(1px 1px 2px rgba(0,0,0,0.3))
 	h2
@@ -145,11 +146,47 @@ nav.main-nav
 		color: $sub-text-color
 	div[class^="step"]
 		height: 750px
+		position: relative
 		border-bottom: 1px solid gray
+		&:first-child
+			margin-top: 35px
+		margin-top: 140px
 	.y-plug
 		position: absolute
+		left: -650px
+		// top: 35px
 	.f-plug
 		position: absolute
+		right: -700px
+		// top: 35px
+	.des
+		position: absolute
+		bottom: 70px
+		left: 50%
+		margin-left: -300px
+		display: block
+	.des2-conv
+		display: inline-block
+		margin-top: 350px
+	.conversion
+		position: absolute
+		left: 50%
+		margin-left: -150px
+	.do-it
+		border-color: #BDC3C7
+		color: white
+		@include box-shadow(0 0 3px rbga(0,0,0,0.8))
+		background: #27AE60
+		@include opacity(0.7)
+		&:hover
+			border-color: $orange
+			color: $orange
+
+			
+		&:after
+			color: $orange
+			background: white
+			@include opacity(0.8)
 footer
 	position: relative
 	height: 750px
@@ -191,22 +228,36 @@ form
 	.fb-btn:hover, .yahoo-btn:hover
 		
 		background: rgba(#fff, 0.4)
-		color: #000
-		@include box-shadow(0px 0px 6px rgba(0,0,0,0.7))
+		// color: #000
+		@include box-shadow(0px 0px 6px rgba(0,0,0,0.9))
 	.fb-btn, .yahoo-btn, .confirm-btn
 		display: block
 		width: 80%
 		margin: 20px auto
 		color: #fff
 	.fb-btn
+		background: rgba(#fff, 0.4)
+		color: $facebook-color
+		// @include box-shadow(0px 0px 6px rgba(0,0,0,0.7))
+		border: 2px solid $facebook-color
 		// display: block
 		// width: 80%
 		// margin: 20px auto
-		background: $facebook-color
+		// background: $facebook-color
 	.yahoo-btn
+		background: rgba(#fff, 0.4)
+		color: $yahoo-color
+		// @include box-shadow(0px 0px 6px rgba(0,0,0,0.7))
+		border: 2px solid $yahoo-color
+
+
 		// display: block
 		// width: 80%
 		// margin: 20px auto
+		// background: $yahoo-color
+	.fb-primary
+		background: $facebook-color
+	.yahoo-primary
 		background: $yahoo-color
 	.confirm-btn
 		width: 28%
@@ -231,3 +282,10 @@ form
 		@include opacity(0.4)
 		&:hover
 			@include opacity(0.6)
+
+// line.php
+canvas
+	&:first-child
+		margin: 100px auto
+	display: block
+	margin: 50px auto

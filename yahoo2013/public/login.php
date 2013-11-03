@@ -35,10 +35,7 @@
 	</nav>
 	<div class="content">
 		<form action="">
-                        <a class="btn <%= @fb_sign_in ? "fb-primary" : "fb-btn" %>" href="/oauth/facebook">Facebook</a>
-                        <a class="btn <%= @y_sign_in ? "yahoo-primary" : "yahoo-btn" %>" href="/oauth/yahoo">Yahoo</a>
-                        <input class="" placeholder="enter your FB-page URL" type="text" name="fan_page" />
-                        <button class="btn confirm-btn" <%= "disabled" unless @fb_sign_in && @y_sign_in %>>Confirm</button>
+			<button class="btn yahoo-btn">Yahoo</button>
 		</form>
 	</div>
 

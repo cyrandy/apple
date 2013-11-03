@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
     graph = fb_graph
 
     fan_page = graph.get_object(self.fb_fan_page)
-    current_user.update_attributes!(fb_fan_page: fan_page["id"])
+    update_attributes!(fb_fan_page: fan_page["id"])
 
     page_accounts = graph.get_connections('me', 'accounts')
     page_accounts.each do |account|
