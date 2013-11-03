@@ -122,7 +122,7 @@ nav.main-nav {
   box-shadow: 0px 1px 5px #bababa;
 }
 /* line 58, ../sass/style.sass */
-nav.main-nav .logo h1 {
+nav.main-nav .logo h1 a {
   font-family: "Love Ya Like A Sister", Arial, serif;
   font-weight: 200;
   font-size: 45px;

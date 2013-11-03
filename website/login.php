@@ -35,10 +35,7 @@
 	</nav>
 	<div class="content">
 		<form action="">
-			<button class="btn fb-btn">Facebook</button>
 			<button class="btn yahoo-btn">Yahoo</button>
-			<input class="" placeholder="enter your FB-page URL" type="text">
-			<button class="btn confirm-btn">Confirm</button>
 		</form>
 	</div>
 
