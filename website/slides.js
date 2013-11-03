@@ -1,6 +1,6 @@
 		$(function(){
 		  $("#slides").slidesjs({
-		    width: 1440,
+		    width: 1280,
 		    height: 700,
 		    play: {
 		  active: true,

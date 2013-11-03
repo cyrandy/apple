@@ -228,42 +228,43 @@ nav.main-nav ul li a.active {
 /* line 135, ../sass/style.sass */
 .steps {
   text-align: center;
+  width: 100%;
 }
-/* line 137, ../sass/style.sass */
+/* line 138, ../sass/style.sass */
 .steps h1 {
   font-size: 4em;
   line-height: 1.3em;
   color: #505050;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-/* line 142, ../sass/style.sass */
+/* line 143, ../sass/style.sass */
 .steps h2 {
   font-size: 2em;
   line-height: 2em;
   color: #e98d5b;
 }
-/* line 146, ../sass/style.sass */
+/* line 147, ../sass/style.sass */
 .steps div[class^="step"] {
   height: 750px;
   position: relative;
   border-bottom: 1px solid gray;
   margin-top: 140px;
 }
-/* line 150, ../sass/style.sass */
+/* line 151, ../sass/style.sass */
 .steps div[class^="step"]:first-child {
   margin-top: 35px;
 }
-/* line 153, ../sass/style.sass */
+/* line 154, ../sass/style.sass */
 .steps .y-plug {
   position: absolute;
   left: -650px;
 }
-/* line 157, ../sass/style.sass */
+/* line 158, ../sass/style.sass */
 .steps .f-plug {
   position: absolute;
   right: -700px;
 }
-/* line 161, ../sass/style.sass */
+/* line 162, ../sass/style.sass */
 .steps .des {
   position: absolute;
   bottom: 70px;
@@ -271,18 +272,18 @@ nav.main-nav ul li a.active {
   margin-left: -300px;
   display: block;
 }
-/* line 167, ../sass/style.sass */
+/* line 168, ../sass/style.sass */
 .steps .des2-conv {
   display: inline-block;
   margin-top: 350px;
 }
-/* line 170, ../sass/style.sass */
+/* line 171, ../sass/style.sass */
 .steps .conversion {
   position: absolute;
   left: 50%;
   margin-left: -150px;
 }
-/* line 174, ../sass/style.sass */
+/* line 175, ../sass/style.sass */
 .steps .do-it {
   border-color: #bdc3c7;
   color: white;
@@ -293,12 +294,12 @@ nav.main-nav ul li a.active {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 180, ../sass/style.sass */
+/* line 181, ../sass/style.sass */
 .steps .do-it:hover {
   border-color: #e67e22;
   color: #e67e22;
 }
-/* line 185, ../sass/style.sass */
+/* line 186, ../sass/style.sass */
 .steps .do-it:after {
   color: #e67e22;
   background: white;
@@ -306,13 +307,13 @@ nav.main-nav ul li a.active {
   opacity: 0.8;
 }
 
-/* line 189, ../sass/style.sass */
+/* line 190, ../sass/style.sass */
 footer {
   position: relative;
   height: 750px;
   background: url(../img/hexellence_@2X.png);
 }
-/* line 193, ../sass/style.sass */
+/* line 194, ../sass/style.sass */
 footer .thanks-yahoo {
   position: absolute;
   top: 50%;
@@ -320,33 +321,33 @@ footer .thanks-yahoo {
   margin-left: -320px;
   margin-top: -170px;
 }
-/* line 194, ../sass/style.sass */
+/* line 195, ../sass/style.sass */
 footer .thanks-yahoo h1 {
   line-height: 3em;
   font-size: 1.4em;
 }
 
-/* line 202, ../sass/style.sass */
+/* line 203, ../sass/style.sass */
 .highlight {
   color: #f3560a;
 }
 
-/* line 204, ../sass/style.sass */
+/* line 205, ../sass/style.sass */
 .facebook-color {
   color: #3b589c;
 }
 
-/* line 206, ../sass/style.sass */
+/* line 207, ../sass/style.sass */
 .yahoo-color {
   color: #600083;
 }
 
-/* line 208, ../sass/style.sass */
+/* line 209, ../sass/style.sass */
 .strong {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* line 214, ../sass/style.sass */
+/* line 215, ../sass/style.sass */
 form {
   display: block;
   margin: 0 auto;
@@ -367,7 +368,7 @@ form {
   -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
 }
-/* line 227, ../sass/style.sass */
+/* line 228, ../sass/style.sass */
 form .fb-btn:hover, form .yahoo-btn:hover {
   background: rgba(255, 255, 255, 0.4);
   color: black;
@@ -375,22 +376,22 @@ form .fb-btn:hover, form .yahoo-btn:hover {
   -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
 }
-/* line 232, ../sass/style.sass */
+/* line 233, ../sass/style.sass */
 form .fb-btn, form .yahoo-btn, form .confirm-btn {
   display: block;
   width: 80%;
   margin: 20px auto;
   color: white;
 }
-/* line 237, ../sass/style.sass */
+/* line 238, ../sass/style.sass */
 form .fb-btn {
   background: #3b589c;
 }
-/* line 242, ../sass/style.sass */
+/* line 243, ../sass/style.sass */
 form .yahoo-btn {
   background: #600083;
 }
-/* line 247, ../sass/style.sass */
+/* line 248, ../sass/style.sass */
 form .confirm-btn {
   width: 28%;
   padding: 21px;
@@ -402,12 +403,12 @@ form .confirm-btn {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 253, ../sass/style.sass */
+/* line 254, ../sass/style.sass */
 form .confirm-btn:hover {
   background: rgba(0, 0, 0, 0.7);
   color: white;
 }
-/* line 257, ../sass/style.sass */
+/* line 258, ../sass/style.sass */
 form input {
   display: block;
   margin: 0 auto;
@@ -421,18 +422,18 @@ form input {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
   opacity: 0.4;
 }
-/* line 268, ../sass/style.sass */
+/* line 269, ../sass/style.sass */
 form input:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
 
-/* line 272, ../sass/style.sass */
+/* line 273, ../sass/style.sass */
 canvas {
   display: block;
   margin: 50px auto;
 }
-/* line 273, ../sass/style.sass */
+/* line 274, ../sass/style.sass */
 canvas:first-child {
   margin: 100px auto;
 }
