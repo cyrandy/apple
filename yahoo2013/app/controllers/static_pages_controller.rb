@@ -1,10 +1,20 @@
+#encoding: utf-8
 require 'xmlsimple'
 class StaticPagesController < ApplicationController
   before_filter :allow_iframe_requests, :only => [:fbauth]
   protect_from_forgery except: :fbauth
 
-  def index
-
+  def getfans
+    if params[:fb_fan_page]
+      redirect_to :back if params[:fb_fan_page].empty?
+      fb_fan_page = /.*com\/(.*)\?.*/.match(params[:fb_fan_page])
+      current_user.update_attributes!(params[:fb_fan_page]) 
+    end
+    @fb_sign_in = fb_sign_in?
+    @y_sign_in =  y_sign_in?
+    @fb_login_page = get_permission_page
+    
+    render layout: false
   end
 
   def handle_fb_access_token
@@ -26,7 +36,7 @@ class StaticPagesController < ApplicationController
 
       # get user data
       user = User.get_user_from_fb_access_token(current_user, @access_token)
-      user.get_page_access_token
+      #user.get_page_access_token
       fb_sign_in(user)
 
       if session[:redirect_url]
@@ -40,7 +50,7 @@ class StaticPagesController < ApplicationController
       end
     end
 
-    render inline: top_location_redirect_script("/close") and return
+    render inline: top_location_redirect_script("/getfans") and return
   end
 
   def fbcallback
@@ -51,7 +61,7 @@ class StaticPagesController < ApplicationController
     user.get_page_access_token 
     fb_sign_in(user)
     
-    render inline: top_location_redirect_script("/close") and return
+    render inline: top_location_redirect_script("/getfans") and return
     #redirect_to FB_APP_SITE
   end
 
@@ -116,7 +126,7 @@ class StaticPagesController < ApplicationController
     user = User.get_user_from_y_token_and_verifier(current_user, oauth_token, oauth_verifier, yahoo_auction_id)
     y_sign_in(user) 
 
-    render inline: top_location_redirect_script("/close") and return
+    render inline: top_location_redirect_script("/getfans") and return
   end
 
   def sync
@@ -132,23 +142,28 @@ class StaticPagesController < ApplicationController
       if item[0] == "item"
         item[1].each do |real_item|
           title = real_item['title'][0]
-          link = real_item['link'][0]
+          link = real_item['link'][0].sub('http://tw.rd.yahoo.com/referurl/bid/RSS/booth/*', '')
           guid = real_item['guid'][0]
           description = real_item['description'] # img
           img = /.*img.*src="(.*)" .*/.match(description[0])[1]
           price = /目前出價: <b>(.*)<\/b>/.match(description[0])[1]
 
+          logger.info link
+          page_content = Net::HTTP.get_response(URI.parse(link)).body.force_encoding('utf-8')
+          logger.info page_content
+          page_description = /.*name\=.description.*content=\'(.*)\'>/.match(page_content)[1]
+
           auction = current_user.auctions.find_by(guid: guid)
           if auction
             # todo
           else
-            current_user.auctions.create!(title: title, link: link, guid: guid, img: img, price: price)
+            current_user.auctions.create!(title: title, link: link, guid: guid, img: img, price: price, description: page_description)
           end
           #redirect_to URI.escape("/facebook/post?name=#{title}&link=#{link}&pic=#{img}") and return
           #current_user.fb_page_graph.put_wall_post("test123 #test", {"name" => title, "link" => params[:link],
           #                        "caption" => "test", "description" => "description",
           #                        "picture" => img}, "192419394248940")
-          messages = [title, "description", "#{SITE_ROOT}/r?to=#{Base64.strict_encode64(link)}&obj=#{guid}&owner=#{yahoo_auction_id}"]
+          messages = ["[#{title}]", page_description, "#{SITE_ROOT}/r?to=#{Base64.strict_encode64(link)}&obj=#{guid}&owner=#{yahoo_auction_id}"]
           current_user.fb_page_graph.put_picture(img, {:message => messages.join("\r\n\r\n")})
         end
       end
@@ -160,7 +175,7 @@ class StaticPagesController < ApplicationController
   def record
     Record.create!(link: Base64.decode64(params[:to]), guid: params[:obj], auction_id: params[:owner])
     
-    redirect_to params[:to]
+    redirect_to Base64.decode64(params[:to])
   end
 
   private 
@@ -182,5 +197,12 @@ class StaticPagesController < ApplicationController
 
       def allow_iframe_requests
         response.headers.delete('X-Frame-Options')
+      end
+
+      def get_permission_page
+        permissions = ['publish_actions', 'publish_stream', 'manage_pages']
+ 
+        @oauth = Koala::Facebook::OAuth.new(FB_APP_ID, FB_SECRET, "#{SITE_ROOT}/oauth/facebook/callback")
+        @oauth.url_for_oauth_code(permissions: permissions)
       end
 end

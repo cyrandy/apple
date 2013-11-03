@@ -2,12 +2,14 @@ Yahoo2013::Application.routes.draw do
   get 'oauth/yahoo' => 'static_pages#yahooauth'
   get 'oauth/yahoo/callback' => 'static_pages#yahoocallback'
 
+  get 'oauth/facebook' => 'static_pages#fbauth'
   post 'oauth/facebook' => 'static_pages#fbauth'
   get 'oauth/facebook/callback' => 'static_pages#fbcallback'
 
   get 'facebook/post' => 'static_pages#fbpost'
   get 'close' => 'static_pages#close_window'
   get 'sync' => 'static_pages#sync'
+  get 'getfans' => 'static_pages#getfans'
 
   get 'r' => 'static_pages#record'
 
