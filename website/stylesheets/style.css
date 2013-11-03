@@ -376,7 +376,7 @@ form .fb-btn:hover, form .yahoo-btn:hover {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
 }
 /* line 233, ../sass/style.sass */
-form .fb-btn, form .yahoo-btn, form .confirm-btn {
+form .fb-btn, form .yahoo-btn, form .confirm-btn, form .fb-primary, form .yahoo-primary {
   display: block;
   width: 80%;
   margin: 20px auto;
