@@ -384,3 +384,13 @@ form input:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
+
+/* line 242, ../sass/style.sass */
+canvas {
+  display: block;
+  margin: 50px auto;
+}
+/* line 243, ../sass/style.sass */
+canvas:first-child {
+  margin: 100px auto;
+}
