@@ -26,18 +26,20 @@ header
 		text-align: center
 		img
 			@include filter(blur(15px))
+			@include opacity(0.6)
 		h1
 			width: 100%
 			margin: 0 auto
 			font-family: 'Gochi Hand', cursive
 			font-weight: bolder
 			font-size: 5em
-			@include text-shadow(1px 1px 3px rgba(0,0,0,0.45))
+			@include text-shadow(2px 2px 3px black)
 			line-height: 1.8em
 			color: #fff
 			position: absolute
 			top: 50%
 			margin-top: -120px
+		// .one h1
 		button
 			position: absolute
 			bottom: 10%
