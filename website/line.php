@@ -51,13 +51,12 @@ $obj2 = '4,50,3,8,20,17,10,30,28,15,21,0,1,3,20,25,32,35,4,3,2';
 	<body>
 		<nav class="main-nav">
 			<div class="logo">
-				<h1>JustFans</h1>
+				<h1><a href="index.html">JustFans</a></h1>
 			</div>
 			<ul>
-				<li><a href="" >About & Contact</a></li>
-				<li><a href=""><span class="highlight strong">Get Fans!</span></a></li>
-				<li><a href="">About</a></li>
-
+				<li><a href="about.php">Contact us</a></li>
+				<li><a href="login.php">Dashboard</a></li>
+				<li><a href="getfans.html"><span class="highlight strong">Get Fans!</span></a></li>
 			</ul>
 		</nav>
 		<div class="content">

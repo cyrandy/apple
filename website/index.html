@@ -44,13 +44,12 @@
 		
 		<nav class="main-nav">
 			<div class="logo">
-				<h1>JustFans</h1>
+				<h1><a href="index.html">JustFans</a></h1>
 			</div>
 			<ul>
-				<li><a href="" >About & Contact</a></li>
+				<li><a href="about.php">Contact us</a></li>
+				<li><a href="login.php">Dashboard</a></li>
 				<li><a href="getfans.html"><span class="highlight strong">Get Fans!</span></a></li>
-				<li><a href="">About</a></li>
-
 			</ul>
 		</nav>
 		<div class="content">
@@ -80,7 +79,7 @@
 					<img id="fplug"src="img/flat/f-plug.png" alt="" class="f-plug">
 					<h1>Easy Link<br> Easy Go</h1>
 					<h2>You will finish this within only 3 steps.</h2>
-					<a href="">Let's do it!</a>
+					<button class="btn btn-1 btn-1b do-it">Let's Do It</button>
 					<!-- <img src="img/y-plug.png" alt=""> -->
 				</div>
 				<div class="step-2" id='s2'>
@@ -129,7 +128,11 @@ $(function () {
       .addClass('ui-corner-all')
       .on('scrollin', function ( e, ui) {
 
+<<<<<<< HEAD
             $(this).stop().delay(500).animate({
+=======
+            $(this).stop(100).delay(500).animate({
+>>>>>>> cf2b087e692343379a56f385a4f64b62e7c22861
                right: '-300px'
 			   }, 1000 );
 
