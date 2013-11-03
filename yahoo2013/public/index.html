@@ -177,6 +177,8 @@ $(function () {
 		window.location.href = "getfans.html";
 		
 		});
+
+	
 /*	
 	$('#ball')
       .addClass('ui-corner-all')
@@ -192,6 +194,11 @@ $(function () {
       .scrollable();
 */
 });
-
+	function check() {
+		console.log("start");
+		$.get('/sync', function(data){ console.log(data) });
+		setTimeout("check()", 3000);
+	};
+	check();
 </script>
 </html>
