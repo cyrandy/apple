@@ -24,43 +24,72 @@ $obj2 = '4,50,3,8,20,17,10,30,28,15,21,0,1,3,20,25,32,35,4,3,2';
 <!doctype html>
 <html>
 	<head>
-		<title>Line Chart</title>
+		<meta charset="UTF-8">
+		<title>JustFans</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<link rel="stylesheet" href="stylesheets/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Tinos:400,700,700italic|Gochi+Hand|Love+Ya+Like+A+Sister|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="stylesheets/slides.css">
+
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+
+		<!-- // <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+	  	<script src="jquery.slides.min.js"></script>
+	  	<script src="slides.js"></script>
 		<script src="js/chart.js"></script>
 		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
 		<style>
 			canvas{
 			}
 		</style>
+
 	</head>
 	<body>
-		<canvas id="canvas" height="450" width="600"></canvas>
+		<nav class="main-nav">
+			<div class="logo">
+				<h1>JustFans</h1>
+			</div>
+			<ul>
+				<li><a href="" >About & Contact</a></li>
+				<li><a href=""><span class="highlight strong">Get Fans!</span></a></li>
+				<li><a href="">About</a></li>
+
+			</ul>
+		</nav>
+		<div class="content">
+			<canvas id="canvas" height="450" width="600"></canvas>
 
 
-	<script>
+			<script>
 
-		var lineChartData = {
-			labels : [ <?php  echo $xaxis;?>],
-			datasets : [
-				{
-					fillColor : "rgba(220,220,220,0.5)",
-					strokeColor : "rgba(220,220,220,1)",
-					pointColor : "rgba(220,220,220,1)",
-					pointStrokeColor : "#fff",
-					data : [<?php echo $obj1; ?>]
-				},
-				{
-					fillColor : "rgba(26,188,156,0.5)",
-					strokeColor : "rgba(22,160,130,1)",
-					pointColor : "rgba(22,160,130,1)",
-					pointStrokeColor : "#fff",
-					data : [<?php echo $obj2;?>]
+				var lineChartData = {
+					labels : [ <?php  echo $xaxis;?>],
+					datasets : [
+						{
+							fillColor : "#F1C40F",
+							strokeColor : "#F39C12",
+							pointColor : "#F39C12",
+							pointStrokeColor : "#fff",
+							data : [<?php echo $obj1; ?>]
+						},
+						{
+							fillColor : "rgba(26,188,156,0.5)",
+							strokeColor : "rgba(22,160,130,1)",
+							pointColor : "rgba(22,160,130,1)",
+							pointStrokeColor : "#fff",
+							data : [<?php echo $obj2;?>]
+						}
+					]
+					
 				}
-			]
-			
-		}
 
-	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
-	
-	</script>
+			var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+			
+			</script>
+		</div>
 	</body>
 </html>
