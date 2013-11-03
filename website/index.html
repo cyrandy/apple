@@ -109,6 +109,9 @@
 				<h1>Particular Thanks</h1>
 				<img src="img/yahoo.png" alt="">			
 			</div>
+			<audio id="musix" controls>
+				<source src="./media/y.mp3">
+			</audio>
 		</footer>
 
 </body>
@@ -119,14 +122,14 @@ $(function () {
       .addClass('ui-corner-all')
       .on('scrollin', function ( e, ui) {
 
-            $(this).stop().delay(500).animate({
+            $(this).stop().delay(50).animate({
                left: '-300px'
 			   }, 1000 );
 
          })
       .on('scrollout', function ( e, ui) {
 
-             $(this).stop().delay(500).animate({
+             $(this).stop().delay(50).animate({
                left: '-300px'
 			   }, 10 );
 
@@ -161,8 +164,15 @@ $(function () {
 					
 			})
 		.scrollable();
+	$('#musix')
 
-	$('.purple, .orange, .blue .do-it').click(function(){
+		.addClass('ui-corner-all')
+		.on('scrollin', function(e, ui){
+			//alert('haha');
+			//$('#audio').play();
+			})
+		.scrollable();
+	$('.purple, .orange, .blue, .do-it').click(function(){
 		window.location.href = "getfans.html";
 		
 		});
