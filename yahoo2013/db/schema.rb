@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131103002344) do
+ActiveRecord::Schema.define(version: 20131103014338) do
 
   create_table "auctions", force: true do |t|
     t.string   "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20131103002344) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "is_post"
+    t.text     "description"
   end
 
   add_index "auctions", ["guid"], name: "index_auctions_on_guid"
