@@ -250,12 +250,12 @@ nav.main-nav ul li a.active {
 /* line 149, ../sass/style.sass */
 .steps .y-plug {
   position: absolute;
-  left: 0px;
+  left: -650px;
 }
 /* line 152, ../sass/style.sass */
 .steps .f-plug {
   position: absolute;
-  right: 0px;
+  right: -700px;
 }
 /* line 155, ../sass/style.sass */
 .steps .conversion {
