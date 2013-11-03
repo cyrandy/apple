@@ -1,0 +1,379 @@
+@charset "UTF-8";
+/* line 17, ../../../../../.rbenv/versions/custom-2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../.rbenv/versions/custom-2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../.rbenv/versions/custom-2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../.rbenv/versions/custom-2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../.rbenv/versions/custom-2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../.rbenv/versions/custom-2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../.rbenv/versions/custom-2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../.rbenv/versions/custom-2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../.rbenv/versions/custom-2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 14, ../sass/style.sass */
+body {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", "Open Sans", sans-serif, cursive;
+  background: url(../img/frenchstucco.png);
+}
+
+/* line 20, ../sass/style.sass */
+header {
+  position: relative;
+  -webkit-box-shadow: 0px 2px 15px #bababa;
+  -moz-box-shadow: 0px 2px 15px #bababa;
+  box-shadow: 0px 2px 15px #bababa;
+  background: url(../img/ricepaper.png);
+}
+/* line 25, ../sass/style.sass */
+header .main-slide {
+  text-align: center;
+}
+/* line 27, ../sass/style.sass */
+header .main-slide img {
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  filter: blur(15px);
+}
+/* line 29, ../sass/style.sass */
+header .main-slide h1 {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Gochi Hand", cursive;
+  font-weight: bolder;
+  font-size: 5em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
+  line-height: 1.8em;
+  color: white;
+  position: absolute;
+  top: 50%;
+  margin-top: -120px;
+}
+/* line 41, ../sass/style.sass */
+header .main-slide button {
+  position: absolute;
+  bottom: 10%;
+  margin-top: -120px;
+}
+
+/* line 47, ../sass/style.sass */
+nav.main-nav {
+  width: 100%;
+  height: 58px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: 0px 1px 5px #bababa;
+  -moz-box-shadow: 0px 1px 5px #bababa;
+  box-shadow: 0px 1px 5px #bababa;
+}
+/* line 58, ../sass/style.sass */
+nav.main-nav .logo h1 {
+  font-family: "Love Ya Like A Sister", Arial, serif;
+  font-weight: 200;
+  font-size: 45px;
+  color: #e67e22;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 7px;
+  left: 20px;
+}
+/* line 71, ../sass/style.sass */
+nav.main-nav ul {
+  height: 58px;
+}
+/* line 73, ../sass/style.sass */
+nav.main-nav ul li {
+  cursor: pointer;
+  float: right;
+  display: inline-block;
+  height: 100%;
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+/* line 82, ../sass/style.sass */
+nav.main-nav ul li a {
+  display: inline-block;
+  padding: 19px 30px;
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+/* line 89, ../sass/style.sass */
+nav.main-nav ul li a:hover {
+  -webkit-box-shadow: inset 1px 1px 20px #bababa;
+  -moz-box-shadow: inset 1px 1px 20px #bababa;
+  box-shadow: inset 1px 1px 20px #bababa;
+  color: #3f3f3f;
+  border-bottom: 2px solid white;
+}
+/* line 93, ../sass/style.sass */
+nav.main-nav ul li a.active {
+  background: #e67e22;
+  color: white;
+}
+
+/* line 98, ../sass/style.sass */
+.content {
+  margin: 0 auto;
+}
+/* line 100, ../sass/style.sass */
+.content h2 {
+  font-size: 2em;
+}
+/* line 102, ../sass/style.sass */
+.content .center-title {
+  text-align: center;
+  color: #505050;
+}
+
+/* line 106, ../sass/style.sass */
+.advantage {
+  background: #ecf0f1;
+  padding: 100px 0px;
+  text-align: center;
+  -webkit-box-shadow: 0px 1px 5px #bababa;
+  -moz-box-shadow: 0px 1px 5px #bababa;
+  box-shadow: 0px 1px 5px #bababa;
+}
+/* line 111, ../sass/style.sass */
+.advantage .module-collection {
+  width: 100%;
+}
+/* line 113, ../sass/style.sass */
+.advantage .module-collection:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 119, ../sass/style.sass */
+.advantage .span1-module {
+  display: inline-block;
+  width: 31%;
+  float: left;
+  text-align: center;
+  margin-left: 3.5%;
+}
+/* line 125, ../sass/style.sass */
+.advantage .span1-module:first-child {
+  margin-left: 0;
+}
+/* line 127, ../sass/style.sass */
+.advantage .span1-module img {
+  margin: 0 auto;
+}
+/* line 129, ../sass/style.sass */
+.advantage .span1-module h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-top: 20px;
+  color: #505050;
+}
+
+/* line 135, ../sass/style.sass */
+.steps {
+  text-align: center;
+}
+/* line 137, ../sass/style.sass */
+.steps h1 {
+  font-size: 4em;
+  line-height: 2em;
+  color: #505050;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 142, ../sass/style.sass */
+.steps h2 {
+  font-size: 2em;
+  line-height: 2em;
+  color: #e98d5b;
+}
+/* line 146, ../sass/style.sass */
+.steps div[class^="step"] {
+  height: 750px;
+  border-bottom: 1px solid gray;
+}
+/* line 149, ../sass/style.sass */
+.steps .y-plug {
+  position: absolute;
+}
+/* line 151, ../sass/style.sass */
+.steps .f-plug {
+  position: absolute;
+}
+
+/* line 153, ../sass/style.sass */
+footer {
+  position: relative;
+  height: 750px;
+  background: url(../img/hexellence_@2X.png);
+}
+/* line 157, ../sass/style.sass */
+footer .thanks-yahoo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -320px;
+  margin-top: -170px;
+}
+/* line 158, ../sass/style.sass */
+footer .thanks-yahoo h1 {
+  line-height: 3em;
+  font-size: 1.4em;
+}
+
+/* line 166, ../sass/style.sass */
+.highlight {
+  color: #f3560a;
+}
+
+/* line 168, ../sass/style.sass */
+.facebook-color {
+  color: #3b589c;
+}
+
+/* line 170, ../sass/style.sass */
+.yahoo-color {
+  color: #600083;
+}
+
+/* line 172, ../sass/style.sass */
+.strong {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* line 178, ../sass/style.sass */
+form {
+  display: block;
+  margin: 0 auto;
+  margin-top: 150px;
+  padding-top: 70px;
+  width: 500px;
+  height: 500px;
+  background: url(../img/wg_blurred_backgrounds_1.jpg);
+  background-size: 500px 500px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+}
+/* line 191, ../sass/style.sass */
+form .fb-btn:hover, form .yahoo-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: black;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+}
+/* line 196, ../sass/style.sass */
+form .fb-btn, form .yahoo-btn, form .confirm-btn {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  color: white;
+}
+/* line 201, ../sass/style.sass */
+form .fb-btn {
+  background: #3b589c;
+}
+/* line 206, ../sass/style.sass */
+form .yahoo-btn {
+  background: #600083;
+}
+/* line 211, ../sass/style.sass */
+form .confirm-btn {
+  width: 28%;
+  padding: 21px;
+  margin-top: 25px;
+  background: #505050;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 217, ../sass/style.sass */
+form .confirm-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+/* line 221, ../sass/style.sass */
+form input {
+  display: block;
+  margin: 0 auto;
+  height: 71px;
+  line-height: 50px;
+  font-size: 1.2em;
+  border: none;
+  background: white;
+  padding: 0 10px;
+  width: 400px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+/* line 232, ../sass/style.sass */
+form input:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+}
+

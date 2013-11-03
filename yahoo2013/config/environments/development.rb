@@ -27,7 +27,7 @@ Yahoo2013::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  SITE_ROOT = "http://justfans.tw"
+  SITE_ROOT = "http://silence.twbbs.org"
 
   FB_APP_ID = "215340905195586"
   FB_SECRET = "89fc7f31748f4cd26f7b954771fe33a8"

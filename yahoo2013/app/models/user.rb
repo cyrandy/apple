@@ -42,9 +42,16 @@ class User < ActiveRecord::Base
 
   def get_page_access_token
     graph = fb_graph
+
+    fan_page = graph.get_object(self.fb_fan_page)
+    current_user.update_attributes!(fb_fan_page: fan_page["id"])
+
     page_accounts = graph.get_connections('me', 'accounts')
-    page_access_token = page_accounts.first['access_token']
-    self.update_attributes!(fb_page_access_token: page_access_token)
+    page_accounts.each do |account|
+      if account["id"] == fan_page["id"]
+        self.update_attributes!(fb_page_access_token: account["access_token"])
+      end
+    end
   end
 
   def fb_graph
@@ -52,6 +59,7 @@ class User < ActiveRecord::Base
   end
 
   def fb_page_graph
+    get_page_access_token
     Koala::Facebook::API.new(self.fb_page_access_token)
   end
 

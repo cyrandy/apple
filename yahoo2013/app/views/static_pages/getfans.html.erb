@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JustFans</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700,700italic|Gochi+Hand|Love+Ya+Like+A+Sister|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheets/slides.css">
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+
+	<!-- // <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+  	<script src="jquery.slides.min.js"></script>
+  	<script src="slides.js"></script>
+  	
+
+</head>
+<body>
+	<script type="text/javascript">
+		function on_click_facebook() {
+			//console.log("click facebook");
+			//document.location.href = "<%= SITE_ROOT %>/oauth/facebook";
+                        //window.open = "/oauth/facebook"
+			//fb_parent = window.open("/oauth/facebook","_blank","height=200,width=400,status=yes,toolbar=no,menubar=no,location=no")
+			//fb_parent = window.open("<%= @fb_login_page %>","_blank","height=200,width=400,status=yes,toolbar=no,menubar=no,location=no")
+			//console.log(fb_parent);
+
+                }
+		function on_click_yahoo() {
+			//window.open('/oauth/yahoo')
+		}
+        </script>
+	<nav class="main-nav">
+		<div class="logo">
+			<h1>JustFans</h1>
+		</div>
+		<ul>
+			<li><a href="" >About & Contact</a></li>
+			<li><a href=""><span class="highlight strong">Get Fans!</span></a></li>
+			<li><a href="">About</a></li>
+
+		</ul>
+	</nav>
+	<div class="content">
+		<form action="">
+			<a class="btn <%= @fb_sign_in ? "fb-primary" : "fb-btn" %>" href="/oauth/facebook">Facebook</a>
+			<a class="btn <%= @y_sign_in ? "yahoo-primary" : "yahoo-btn" %>" href="/oauth/yahoo">Yahoo</a>
+			<input class="" placeholder="enter your FB-page URL" type="text" name="fan_page" />
+			<button class="btn confirm-btn" <%= "disabled" unless @fb_sign_in && @y_sign_in %>>Confirm</button>
+		</form>
+	</div>
+
+</body>
+</html>
