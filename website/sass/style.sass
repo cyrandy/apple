@@ -136,7 +136,7 @@ nav.main-nav
 	text-align: center
 	h1
 		font-size: 4em
-		line-height: 2em
+		line-height: 1.3em
 		color: $main-text-color
 		@include text-shadow(1px 1px 2px rgba(0,0,0,0.3))
 	h2
@@ -145,29 +145,46 @@ nav.main-nav
 		color: $sub-text-color
 	div[class^="step"]
 		height: 750px
+		position: relative
 		border-bottom: 1px solid gray
+		&:first-child
+			margin-top: 35px
+		margin-top: 140px
 	.y-plug
 		position: absolute
 		left: -650px
+		// top: 35px
 	.f-plug
 		position: absolute
 		right: -700px
+		// top: 35px
+	.des
+		position: absolute
+		bottom: 70px
+		left: 50%
+		margin-left: -300px
+		display: block
+	.des2-conv
+		display: inline-block
+		margin-top: 350px
 	.conversion
 		position: absolute
 		left: 50%
 		margin-left: -150px
 	.do-it
-		border-color: $orange
-		color: $orange
+		border-color: #BDC3C7
+		color: white
+		@include box-shadow(0 0 3px rbga(0,0,0,0.8))
+		background: #27AE60
+		@include opacity(0.7)
 		&:hover
-			border-color: #BDC3C7
-			color: white
-			@include box-shadow(0 0 3px rbga(0,0,0,0.8))
-			background: #27AE60
-			@include opacity(0.7)
+			border-color: $orange
+			color: $orange
+
+			
 		&:after
-			color: white
-			background: #8E44AD
+			color: $orange
+			background: white
 			@include opacity(0.8)
 footer
 	position: relative
