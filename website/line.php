@@ -42,9 +42,9 @@ $obj2 = '4,50,3,8,20,17,10,30,28,15,21,0,1,3,20,25,32,35,4,3,2';
 			labels : [ <?php  echo $xaxis;?>],
 			datasets : [
 				{
-					fillColor : "rgba(220,220,220,0.5)",
-					strokeColor : "rgba(220,220,220,1)",
-					pointColor : "rgba(220,220,220,1)",
+					fillColor : "#F1C40F",
+					strokeColor : "#F39C12",
+					pointColor : "#F39C12",
 					pointStrokeColor : "#fff",
 					data : [<?php echo $obj1; ?>]
 				},
