@@ -156,6 +156,19 @@ nav.main-nav
 		position: absolute
 		left: 50%
 		margin-left: -150px
+	.do-it
+		border-color: $orange
+		color: $orange
+		&:hover
+			border-color: #BDC3C7
+			color: white
+			@include box-shadow(0 0 3px rbga(0,0,0,0.8))
+			background: #27AE60
+			@include opacity(0.7)
+		&:after
+			color: white
+			background: #8E44AD
+			@include opacity(0.8)
 footer
 	position: relative
 	height: 750px
